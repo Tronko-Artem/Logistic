@@ -1,10 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Compile Update="AddProductToSpecification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="AddSpecification.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="CreateTreatie.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SpecificationRegistry.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="TreatieRegistry.cs">

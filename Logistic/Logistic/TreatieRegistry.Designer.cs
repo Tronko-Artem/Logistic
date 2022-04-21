@@ -55,6 +55,7 @@ namespace Logistic
             this.label3 = new System.Windows.Forms.Label();
             this.TreatieNumberTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -288,11 +289,21 @@ namespace Logistic
             this.label2.TabIndex = 0;
             this.label2.Text = "Фильтры";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(12, 723);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(202, 38);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Редактировать";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // TreatieRegistry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1004, 776);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.ExitButton);
@@ -336,5 +347,6 @@ namespace Logistic
         private System.Windows.Forms.DateTimePicker DateOfStartTextBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker DateOfConclusionTextBox;
+        private System.Windows.Forms.Button button1;
     }
 }

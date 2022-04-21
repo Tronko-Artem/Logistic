@@ -58,7 +58,7 @@ namespace Logistic
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(116, 133);
+            this.label1.Location = new System.Drawing.Point(83, 141);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(130, 20);
             this.label1.TabIndex = 1;
@@ -76,7 +76,7 @@ namespace Logistic
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(133, 210);
+            this.label2.Location = new System.Drawing.Point(83, 218);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(91, 20);
             this.label2.TabIndex = 3;
@@ -92,7 +92,7 @@ namespace Logistic
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(459, 133);
+            this.label4.Location = new System.Drawing.Point(428, 141);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(132, 20);
             this.label4.TabIndex = 7;
@@ -101,7 +101,7 @@ namespace Logistic
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(444, 210);
+            this.label5.Location = new System.Drawing.Point(428, 215);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(174, 20);
             this.label5.TabIndex = 9;
@@ -117,7 +117,7 @@ namespace Logistic
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(462, 294);
+            this.label6.Location = new System.Drawing.Point(428, 297);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(129, 20);
             this.label6.TabIndex = 11;
@@ -133,7 +133,7 @@ namespace Logistic
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(83, 294);
+            this.label7.Location = new System.Drawing.Point(83, 299);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(212, 20);
             this.label7.TabIndex = 12;
@@ -159,7 +159,7 @@ namespace Logistic
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(83, 378);
+            this.label3.Location = new System.Drawing.Point(83, 387);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(143, 20);
             this.label3.TabIndex = 20;

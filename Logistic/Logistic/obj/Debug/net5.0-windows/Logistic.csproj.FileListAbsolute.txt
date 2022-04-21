@@ -19,3 +19,6 @@ C:\Users\1\Desktop\Logistic\Logistic\Logistic\obj\Debug\net5.0-windows\Logistic.
 C:\Users\1\Desktop\Logistic\Logistic\Logistic\obj\Debug\net5.0-windows\Logistic.Treaties.resources
 C:\Users\1\Desktop\Logistic\Logistic\Logistic\obj\Debug\net5.0-windows\Logistic.CreateTreatie.resources
 C:\Users\1\Desktop\Logistic\Logistic\Logistic\obj\Debug\net5.0-windows\Logistic.TreatieRegistry.resources
+C:\Users\1\Desktop\Logistic\Logistic\Logistic\obj\Debug\net5.0-windows\Logistic.AddSpecification.resources
+C:\Users\1\Desktop\Logistic\Logistic\Logistic\obj\Debug\net5.0-windows\Logistic.SpecificationRegistry.resources
+C:\Users\1\Desktop\Logistic\Logistic\Logistic\obj\Debug\net5.0-windows\Logistic.AddProductToSpecification.resources

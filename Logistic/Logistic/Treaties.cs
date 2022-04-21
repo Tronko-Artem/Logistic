@@ -33,5 +33,17 @@ namespace Logistic
             Form TreatieRegistry = new TreatieRegistry();
             TreatieRegistry.Show();
         }
+
+        private void AddSpecificationButton_Click(object sender, EventArgs e)
+        {
+            Form AddSpecification = new AddSpecification();
+            AddSpecification.Show();
+        }
+
+        private void SpecificationRegistryButton_Click(object sender, EventArgs e)
+        {
+            Form SpecificationRegistry = new SpecificationRegistry();
+            SpecificationRegistry.Show();
+        }
     }
 }
