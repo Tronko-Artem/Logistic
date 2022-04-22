@@ -54,6 +54,7 @@ namespace Logistic
             this.ReferenceBooksButton.TabIndex = 1;
             this.ReferenceBooksButton.Text = "Справочники";
             this.ReferenceBooksButton.UseVisualStyleBackColor = true;
+            this.ReferenceBooksButton.Click += new System.EventHandler(this.ReferenceBooksButton_Click);
             // 
             // button1
             // 

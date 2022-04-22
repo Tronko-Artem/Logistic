@@ -101,7 +101,7 @@ namespace Logistic
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(482, 544);
+            this.ClientSize = new System.Drawing.Size(482, 529);
             this.Controls.Add(this.AddSpecificationButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ExitButton);

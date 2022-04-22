@@ -10,28 +10,16 @@ using System.Windows.Forms;
 
 namespace Logistic
 {
-    public partial class MainForm : Form
+    public partial class ReferenceBooks : Form
     {
-        public MainForm()
+        public ReferenceBooks()
         {
             InitializeComponent();
-        }
-
-        private void TreatiesButton_Click(object sender, EventArgs e)
-        {
-            Form Treaties = new Treaties();
-            Treaties.Show();
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void ReferenceBooksButton_Click(object sender, EventArgs e)
-        {
-            Form ReferenceBooks = new ReferenceBooks();
-            ReferenceBooks.Show();
         }
     }
 }
