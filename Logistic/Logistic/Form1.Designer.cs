@@ -33,6 +33,7 @@ namespace Logistic
             this.ReferenceBooksButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.ExitButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // TreatiesButton
@@ -73,11 +74,22 @@ namespace Logistic
             this.label1.TabIndex = 3;
             this.label1.Text = "Главное меню";
             // 
+            // ExitButton
+            // 
+            this.ExitButton.Location = new System.Drawing.Point(-8, 443);
+            this.ExitButton.Name = "ExitButton";
+            this.ExitButton.Size = new System.Drawing.Size(500, 100);
+            this.ExitButton.TabIndex = 4;
+            this.ExitButton.Text = "Выход";
+            this.ExitButton.UseVisualStyleBackColor = true;
+            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(482, 449);
+            this.ClientSize = new System.Drawing.Size(482, 539);
+            this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.ReferenceBooksButton);
@@ -95,6 +107,7 @@ namespace Logistic
         private System.Windows.Forms.Button ReferenceBooksButton;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button ExitButton;
     }
 }
 
