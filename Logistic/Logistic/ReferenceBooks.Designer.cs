@@ -51,7 +51,7 @@ namespace Logistic
             this.CounteragentsButton.Name = "CounteragentsButton";
             this.CounteragentsButton.Size = new System.Drawing.Size(500, 100);
             this.CounteragentsButton.TabIndex = 1;
-            this.CounteragentsButton.Text = "Контрагенты";
+            this.CounteragentsButton.Text = "Клиентская база";
             this.CounteragentsButton.UseVisualStyleBackColor = true;
             // 
             // button1
