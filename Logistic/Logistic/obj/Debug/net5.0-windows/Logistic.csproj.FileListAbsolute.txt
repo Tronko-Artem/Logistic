@@ -19,9 +19,6 @@ C:\Users\1\Desktop\Logistic\Logistic\Logistic\obj\Debug\net5.0-windows\Logistic.
 C:\Users\1\Desktop\Logistic\Logistic\Logistic\obj\Debug\net5.0-windows\Logistic.Treaties.resources
 C:\Users\1\Desktop\Logistic\Logistic\Logistic\obj\Debug\net5.0-windows\Logistic.CreateTreatie.resources
 C:\Users\1\Desktop\Logistic\Logistic\Logistic\obj\Debug\net5.0-windows\Logistic.TreatieRegistry.resources
-C:\Users\1\Desktop\Logistic\Logistic\Logistic\obj\Debug\net5.0-windows\Logistic.AddSpecification.resources
-C:\Users\1\Desktop\Logistic\Logistic\Logistic\obj\Debug\net5.0-windows\Logistic.SpecificationRegistry.resources
-C:\Users\1\Desktop\Logistic\Logistic\Logistic\obj\Debug\net5.0-windows\Logistic.AddProductToSpecification.resources
 C:\Users\maksi\Desktop\Logistic-main\Logistic\Logistic\bin\Debug\net5.0-windows\Logistic.exe
 C:\Users\maksi\Desktop\Logistic-main\Logistic\Logistic\bin\Debug\net5.0-windows\Logistic.deps.json
 C:\Users\maksi\Desktop\Logistic-main\Logistic\Logistic\bin\Debug\net5.0-windows\Logistic.runtimeconfig.json
@@ -71,3 +68,4 @@ C:\Users\maksi\Desktop\Logistic_git\Logistic\Logistic\obj\Debug\net5.0-windows\r
 C:\Users\maksi\Desktop\Logistic_git\Logistic\Logistic\obj\Debug\net5.0-windows\Logistic.pdb
 C:\Users\maksi\Desktop\Logistic_git\Logistic\Logistic\obj\Debug\net5.0-windows\Logistic.genruntimeconfig.cache
 C:\Users\1\Desktop\Logistic\Logistic\Logistic\obj\Debug\net5.0-windows\Logistic.ReferenceBooks.resources
+C:\Users\1\Desktop\Logistic\Logistic\Logistic\obj\Debug\net5.0-windows\Logistic.TreatieEdit.resources

@@ -10,22 +10,16 @@ using System.Windows.Forms;
 
 namespace Logistic
 {
-    public partial class TreatieRegistry : Form
+    public partial class TreatieEdit : Form
     {
-        public TreatieRegistry()
+        public TreatieEdit()
         {
             InitializeComponent();
         }
 
-        private void ExitButton_Click(object sender, EventArgs e)
+        private void CancelButton_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void EditButton_Click(object sender, EventArgs e)
-        {
-            Form TreatieEdit = new TreatieEdit();
-            TreatieEdit.Show();
         }
     }
 }

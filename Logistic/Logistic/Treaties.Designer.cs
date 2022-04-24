@@ -31,10 +31,8 @@ namespace Logistic
         {
             this.CreateTreatieButton = new System.Windows.Forms.Button();
             this.TreatieRegistryButton = new System.Windows.Forms.Button();
-            this.SpecificationRegistryButton = new System.Windows.Forms.Button();
             this.ExitButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.AddSpecificationButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // CreateTreatieButton
@@ -43,7 +41,7 @@ namespace Logistic
             this.CreateTreatieButton.Name = "CreateTreatieButton";
             this.CreateTreatieButton.Size = new System.Drawing.Size(500, 100);
             this.CreateTreatieButton.TabIndex = 0;
-            this.CreateTreatieButton.Text = "Создать договор";
+            this.CreateTreatieButton.Text = "Создать новый договор";
             this.CreateTreatieButton.UseVisualStyleBackColor = true;
             this.CreateTreatieButton.Click += new System.EventHandler(this.CreateTreatieButton_Click);
             // 
@@ -57,19 +55,9 @@ namespace Logistic
             this.TreatieRegistryButton.UseVisualStyleBackColor = true;
             this.TreatieRegistryButton.Click += new System.EventHandler(this.TreatieRegistryButton_Click);
             // 
-            // SpecificationRegistryButton
-            // 
-            this.SpecificationRegistryButton.Location = new System.Drawing.Point(-10, 330);
-            this.SpecificationRegistryButton.Name = "SpecificationRegistryButton";
-            this.SpecificationRegistryButton.Size = new System.Drawing.Size(247, 100);
-            this.SpecificationRegistryButton.TabIndex = 3;
-            this.SpecificationRegistryButton.Text = "Реестр спецификаций";
-            this.SpecificationRegistryButton.UseVisualStyleBackColor = true;
-            this.SpecificationRegistryButton.Click += new System.EventHandler(this.SpecificationRegistryButton_Click);
-            // 
             // ExitButton
             // 
-            this.ExitButton.Location = new System.Drawing.Point(-10, 436);
+            this.ExitButton.Location = new System.Drawing.Point(-10, 330);
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Size = new System.Drawing.Size(500, 100);
             this.ExitButton.TabIndex = 5;
@@ -87,27 +75,16 @@ namespace Logistic
             this.label1.TabIndex = 6;
             this.label1.Text = "Работа с договорами";
             // 
-            // AddSpecificationButton
-            // 
-            this.AddSpecificationButton.Location = new System.Drawing.Point(243, 330);
-            this.AddSpecificationButton.Name = "AddSpecificationButton";
-            this.AddSpecificationButton.Size = new System.Drawing.Size(247, 100);
-            this.AddSpecificationButton.TabIndex = 7;
-            this.AddSpecificationButton.Text = "Добавить спецификацию";
-            this.AddSpecificationButton.UseVisualStyleBackColor = true;
-            this.AddSpecificationButton.Click += new System.EventHandler(this.AddSpecificationButton_Click);
-            // 
             // Treaties
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(482, 529);
-            this.Controls.Add(this.AddSpecificationButton);
+            this.ClientSize = new System.Drawing.Size(482, 427);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ExitButton);
-            this.Controls.Add(this.SpecificationRegistryButton);
             this.Controls.Add(this.TreatieRegistryButton);
             this.Controls.Add(this.CreateTreatieButton);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Treaties";
             this.Text = "Договоры";
             this.ResumeLayout(false);
@@ -119,9 +96,7 @@ namespace Logistic
 
         private System.Windows.Forms.Button CreateTreatieButton;
         private System.Windows.Forms.Button TreatieRegistryButton;
-        private System.Windows.Forms.Button SpecificationRegistryButton;
         private System.Windows.Forms.Button ExitButton;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button AddSpecificationButton;
     }
 }

@@ -95,6 +95,9 @@ namespace Logistic
             this.Controls.Add(this.button1);
             this.Controls.Add(this.ReferenceBooksButton);
             this.Controls.Add(this.TreatiesButton);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximumSize = new System.Drawing.Size(500, 586);
+            this.MinimumSize = new System.Drawing.Size(500, 586);
             this.Name = "MainForm";
             this.Text = "Главная";
             this.ResumeLayout(false);
