@@ -41,8 +41,8 @@ namespace Logistic
             this.OrganizationCorrespondentAccount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OrganizationBIK = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OrganizationOKPO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.AddCounteragentButton = new System.Windows.Forms.Button();
+            this.EditCounteragentButton = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
@@ -176,23 +176,25 @@ namespace Logistic
             this.OrganizationOKPO.Name = "OrganizationOKPO";
             this.OrganizationOKPO.ReadOnly = true;
             // 
-            // button1
+            // AddCounteragentButton
             // 
-            this.button1.Location = new System.Drawing.Point(13, 644);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(206, 29);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Добавить";
-            this.button1.UseVisualStyleBackColor = true;
+            this.AddCounteragentButton.Location = new System.Drawing.Point(13, 644);
+            this.AddCounteragentButton.Name = "AddCounteragentButton";
+            this.AddCounteragentButton.Size = new System.Drawing.Size(206, 29);
+            this.AddCounteragentButton.TabIndex = 2;
+            this.AddCounteragentButton.Text = "Добавить";
+            this.AddCounteragentButton.UseVisualStyleBackColor = true;
+            this.AddCounteragentButton.Click += new System.EventHandler(this.AddCounteragentButton_Click);
             // 
-            // button2
+            // EditCounteragentButton
             // 
-            this.button2.Location = new System.Drawing.Point(225, 644);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(206, 29);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Редактировать";
-            this.button2.UseVisualStyleBackColor = true;
+            this.EditCounteragentButton.Location = new System.Drawing.Point(225, 644);
+            this.EditCounteragentButton.Name = "EditCounteragentButton";
+            this.EditCounteragentButton.Size = new System.Drawing.Size(206, 29);
+            this.EditCounteragentButton.TabIndex = 3;
+            this.EditCounteragentButton.Text = "Редактировать";
+            this.EditCounteragentButton.UseVisualStyleBackColor = true;
+            this.EditCounteragentButton.Click += new System.EventHandler(this.EditCounteragentButton_Click);
             // 
             // button3
             // 
@@ -408,8 +410,8 @@ namespace Logistic
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.EditCounteragentButton);
+            this.Controls.Add(this.AddCounteragentButton);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -427,8 +429,8 @@ namespace Logistic
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button AddCounteragentButton;
+        private System.Windows.Forms.Button EditCounteragentButton;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;

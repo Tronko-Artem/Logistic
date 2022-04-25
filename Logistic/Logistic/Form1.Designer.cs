@@ -62,7 +62,7 @@ namespace Logistic
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(500, 100);
             this.button1.TabIndex = 2;
-            this.button1.Text = "Заказы";
+            this.button1.Text = "Заявки";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // label1

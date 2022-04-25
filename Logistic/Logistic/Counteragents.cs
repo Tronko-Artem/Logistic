@@ -16,5 +16,17 @@ namespace Logistic
         {
             InitializeComponent();
         }
+
+        private void AddCounteragentButton_Click(object sender, EventArgs e)
+        {
+            Form AddCounteragent = new AddCounteragent();
+            AddCounteragent.Show();
+        }
+
+        private void EditCounteragentButton_Click(object sender, EventArgs e)
+        {
+            Form EditCounteragent = new EditCounteragent();
+            EditCounteragent.Show();
+        }
     }
 }
