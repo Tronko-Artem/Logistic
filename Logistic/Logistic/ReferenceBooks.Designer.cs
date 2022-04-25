@@ -53,6 +53,7 @@ namespace Logistic
             this.CounteragentsButton.TabIndex = 1;
             this.CounteragentsButton.Text = "Клиентская база";
             this.CounteragentsButton.UseVisualStyleBackColor = true;
+            this.CounteragentsButton.Click += new System.EventHandler(this.CounteragentsButton_Click);
             // 
             // button1
             // 

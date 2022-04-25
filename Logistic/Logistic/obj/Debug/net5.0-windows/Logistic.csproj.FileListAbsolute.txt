@@ -69,3 +69,4 @@ C:\Users\maksi\Desktop\Logistic_git\Logistic\Logistic\obj\Debug\net5.0-windows\L
 C:\Users\maksi\Desktop\Logistic_git\Logistic\Logistic\obj\Debug\net5.0-windows\Logistic.genruntimeconfig.cache
 C:\Users\1\Desktop\Logistic\Logistic\Logistic\obj\Debug\net5.0-windows\Logistic.ReferenceBooks.resources
 C:\Users\1\Desktop\Logistic\Logistic\Logistic\obj\Debug\net5.0-windows\Logistic.TreatieEdit.resources
+C:\Users\1\Desktop\Logistic\Logistic\Logistic\obj\Debug\net5.0-windows\Logistic.Counteragents.resources

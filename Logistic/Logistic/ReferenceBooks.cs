@@ -21,5 +21,11 @@ namespace Logistic
         {
             this.Close();
         }
+
+        private void CounteragentsButton_Click(object sender, EventArgs e)
+        {
+            Form Counteragents = new Counteragents();
+            Counteragents.Show();
+        }
     }
 }
