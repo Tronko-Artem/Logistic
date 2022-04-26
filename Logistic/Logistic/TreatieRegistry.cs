@@ -65,5 +65,11 @@ namespace Logistic
             StartDateCheckBox.Checked = false;
             EndDateCheckBox.Checked = false;
         }
+
+        private void ExportTreatieButton_Click(object sender, EventArgs e)
+        {
+            Form TreatieExport = new TreatieExport();
+            TreatieExport.Show();
+        }
     }
 }

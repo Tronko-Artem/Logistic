@@ -39,6 +39,7 @@ namespace Logistic
             this.label1 = new System.Windows.Forms.Label();
             this.ExitButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.ClearFilterButton = new System.Windows.Forms.Button();
             this.EndDateCheckBox = new System.Windows.Forms.CheckBox();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -63,8 +64,7 @@ namespace Logistic
             this.label2 = new System.Windows.Forms.Label();
             this.EditButton = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.ExportTreatieButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -170,6 +170,15 @@ namespace Logistic
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(973, 257);
             this.panel1.TabIndex = 3;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(817, 223);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(151, 29);
+            this.button1.TabIndex = 22;
+            this.button1.Text = "Найти";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // ClearFilterButton
             // 
@@ -393,30 +402,22 @@ namespace Logistic
             this.button2.Text = "Удалить";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // ExportTreatieButton
             // 
-            this.button3.Location = new System.Drawing.Point(11, 810);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(202, 37);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Экспортировать";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(817, 223);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(151, 29);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "Найти";
-            this.button1.UseVisualStyleBackColor = true;
+            this.ExportTreatieButton.Location = new System.Drawing.Point(11, 810);
+            this.ExportTreatieButton.Name = "ExportTreatieButton";
+            this.ExportTreatieButton.Size = new System.Drawing.Size(202, 37);
+            this.ExportTreatieButton.TabIndex = 6;
+            this.ExportTreatieButton.Text = "Экспортировать";
+            this.ExportTreatieButton.UseVisualStyleBackColor = true;
+            this.ExportTreatieButton.Click += new System.EventHandler(this.ExportTreatieButton_Click);
             // 
             // TreatieRegistry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1003, 857);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.ExportTreatieButton);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.EditButton);
             this.Controls.Add(this.label2);
@@ -475,7 +476,7 @@ namespace Logistic
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DateTimePicker StartDateListBox2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button ExportTreatieButton;
         private System.Windows.Forms.Button button1;
     }
 }

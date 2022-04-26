@@ -75,3 +75,5 @@ C:\Users\1\Desktop\Logistic\Logistic\Logistic\obj\Debug\net5.0-windows\Logistic.
 C:\Users\1\Desktop\Logistic\Logistic\Logistic\obj\Debug\net5.0-windows\Logistic.Orders.resources
 C:\Users\1\Desktop\Logistic\Logistic\Logistic\obj\Debug\net5.0-windows\Logistic.CreateOrder.resources
 C:\Users\1\Desktop\Logistic\Logistic\Logistic\obj\Debug\net5.0-windows\Logistic.EditOrder.resources
+C:\Users\1\Desktop\Logistic\Logistic\Logistic\obj\Debug\net5.0-windows\Logistic.TreatieExport.resources
+C:\Users\1\Desktop\Logistic\Logistic\Logistic\obj\Debug\net5.0-windows\Logistic.OrderExport.resources

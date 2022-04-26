@@ -57,6 +57,7 @@ namespace Logistic
             this.StartDateListBox2 = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.StartDateListBox1 = new System.Windows.Forms.DateTimePicker();
+            this.ExportButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -185,7 +186,7 @@ namespace Logistic
             // 
             // EditOrderButton
             // 
-            this.EditOrderButton.Location = new System.Drawing.Point(221, 669);
+            this.EditOrderButton.Location = new System.Drawing.Point(432, 668);
             this.EditOrderButton.Name = "EditOrderButton";
             this.EditOrderButton.Size = new System.Drawing.Size(206, 29);
             this.EditOrderButton.TabIndex = 10;
@@ -195,7 +196,7 @@ namespace Logistic
             // 
             // AddOrderButton
             // 
-            this.AddOrderButton.Location = new System.Drawing.Point(9, 669);
+            this.AddOrderButton.Location = new System.Drawing.Point(220, 668);
             this.AddOrderButton.Name = "AddOrderButton";
             this.AddOrderButton.Size = new System.Drawing.Size(206, 29);
             this.AddOrderButton.TabIndex = 9;
@@ -326,11 +327,22 @@ namespace Logistic
             this.StartDateListBox1.Size = new System.Drawing.Size(227, 27);
             this.StartDateListBox1.TabIndex = 4;
             // 
+            // ExportButton
+            // 
+            this.ExportButton.Location = new System.Drawing.Point(8, 668);
+            this.ExportButton.Name = "ExportButton";
+            this.ExportButton.Size = new System.Drawing.Size(206, 29);
+            this.ExportButton.TabIndex = 14;
+            this.ExportButton.Text = "Экспортировать";
+            this.ExportButton.UseVisualStyleBackColor = true;
+            this.ExportButton.Click += new System.EventHandler(this.ExportButton_Click);
+            // 
             // Orders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1221, 716);
+            this.ClientSize = new System.Drawing.Size(1221, 704);
+            this.Controls.Add(this.ExportButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.DeleteOrderButton);
@@ -381,5 +393,6 @@ namespace Logistic
         private System.Windows.Forms.DateTimePicker StartDateListBox2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DateTimePicker StartDateListBox1;
+        private System.Windows.Forms.Button ExportButton;
     }
 }

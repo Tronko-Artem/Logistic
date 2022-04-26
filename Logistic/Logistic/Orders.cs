@@ -51,5 +51,11 @@ namespace Logistic
             Form EditOrder = new EditOrder();
             EditOrder.Show();
         }
+
+        private void ExportButton_Click(object sender, EventArgs e)
+        {
+            Form OrderExport = new OrderExport();
+            OrderExport.Show();
+        }
     }
 }
