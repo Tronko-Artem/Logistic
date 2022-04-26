@@ -7,13 +7,22 @@
     <Compile Update="Counteragents.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="CreateOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="CreateTreatie.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="EditCounteragent.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="EditOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Orders.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="ReferenceBooks.cs">

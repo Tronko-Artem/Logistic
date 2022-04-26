@@ -64,6 +64,7 @@ namespace Logistic
             this.OrdersButton.TabIndex = 2;
             this.OrdersButton.Text = "Заявки";
             this.OrdersButton.UseVisualStyleBackColor = true;
+            this.OrdersButton.Click += new System.EventHandler(this.OrdersButton_Click);
             // 
             // label1
             // 

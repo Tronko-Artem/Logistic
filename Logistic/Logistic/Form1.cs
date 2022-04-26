@@ -33,5 +33,11 @@ namespace Logistic
             Form ReferenceBooks = new ReferenceBooks();
             ReferenceBooks.Show();
         }
+
+        private void OrdersButton_Click(object sender, EventArgs e)
+        {
+            Form Orders = new Orders();
+            Orders.Show();
+        }
     }
 }

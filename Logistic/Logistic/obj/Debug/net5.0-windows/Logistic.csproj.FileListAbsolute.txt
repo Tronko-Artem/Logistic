@@ -72,3 +72,6 @@ C:\Users\1\Desktop\Logistic\Logistic\Logistic\obj\Debug\net5.0-windows\Logistic.
 C:\Users\1\Desktop\Logistic\Logistic\Logistic\obj\Debug\net5.0-windows\Logistic.Counteragents.resources
 C:\Users\1\Desktop\Logistic\Logistic\Logistic\obj\Debug\net5.0-windows\Logistic.AddCounteragent.resources
 C:\Users\1\Desktop\Logistic\Logistic\Logistic\obj\Debug\net5.0-windows\Logistic.EditCounteragent.resources
+C:\Users\1\Desktop\Logistic\Logistic\Logistic\obj\Debug\net5.0-windows\Logistic.Orders.resources
+C:\Users\1\Desktop\Logistic\Logistic\Logistic\obj\Debug\net5.0-windows\Logistic.CreateOrder.resources
+C:\Users\1\Desktop\Logistic\Logistic\Logistic\obj\Debug\net5.0-windows\Logistic.EditOrder.resources
