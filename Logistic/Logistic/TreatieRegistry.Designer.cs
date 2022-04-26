@@ -39,23 +39,35 @@ namespace Logistic
             this.label1 = new System.Windows.Forms.Label();
             this.ExitButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.CounterpartyTextBox = new System.Windows.Forms.ComboBox();
-            this.DateOfEndTextBox = new System.Windows.Forms.DateTimePicker();
+            this.ClearFilterButton = new System.Windows.Forms.Button();
+            this.EndDateCheckBox = new System.Windows.Forms.CheckBox();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.DateOfConclusionTextBox = new System.Windows.Forms.DateTimePicker();
+            this.EndDateListBox2 = new System.Windows.Forms.DateTimePicker();
+            this.label10 = new System.Windows.Forms.Label();
+            this.EndDateListBox1 = new System.Windows.Forms.DateTimePicker();
+            this.StartDateCheckBox = new System.Windows.Forms.CheckBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.StartDateListBox2 = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
+            this.StartDateListBox1 = new System.Windows.Forms.DateTimePicker();
+            this.SummaryTextBox = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.StatusListBox = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.CounteragentListBox = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.TreatieNumberTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.EditButton = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -72,7 +84,7 @@ namespace Logistic
             this.Counterparty,
             this.Summary,
             this.Status});
-            this.dataGridView1.Location = new System.Drawing.Point(11, 272);
+            this.dataGridView1.Location = new System.Drawing.Point(11, 362);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
@@ -128,7 +140,7 @@ namespace Logistic
             // 
             // ExitButton
             // 
-            this.ExitButton.Location = new System.Drawing.Point(783, 723);
+            this.ExitButton.Location = new System.Drawing.Point(778, 810);
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Size = new System.Drawing.Size(202, 37);
             this.ExitButton.TabIndex = 2;
@@ -139,112 +151,206 @@ namespace Logistic
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.ClearFilterButton);
+            this.panel1.Controls.Add(this.EndDateCheckBox);
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.StartDateCheckBox);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.SummaryTextBox);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.StatusListBox);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.CounterpartyTextBox);
-            this.panel1.Controls.Add(this.DateOfEndTextBox);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.DateOfConclusionTextBox);
-            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.CounteragentListBox);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.TreatieNumberTextBox);
             this.panel1.Location = new System.Drawing.Point(11, 99);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(973, 167);
+            this.panel1.Size = new System.Drawing.Size(973, 257);
             this.panel1.TabIndex = 3;
+            // 
+            // ClearFilterButton
+            // 
+            this.ClearFilterButton.Location = new System.Drawing.Point(881, 3);
+            this.ClearFilterButton.Name = "ClearFilterButton";
+            this.ClearFilterButton.Size = new System.Drawing.Size(87, 29);
+            this.ClearFilterButton.TabIndex = 21;
+            this.ClearFilterButton.Text = "Очистить";
+            this.ClearFilterButton.UseVisualStyleBackColor = true;
+            this.ClearFilterButton.Click += new System.EventHandler(this.ClearFilterButton_Click);
+            // 
+            // EndDateCheckBox
+            // 
+            this.EndDateCheckBox.AutoSize = true;
+            this.EndDateCheckBox.Location = new System.Drawing.Point(668, 66);
+            this.EndDateCheckBox.Name = "EndDateCheckBox";
+            this.EndDateCheckBox.Size = new System.Drawing.Size(213, 24);
+            this.EndDateCheckBox.TabIndex = 20;
+            this.EndDateCheckBox.Text = "Дата окончания действия:";
+            this.EndDateCheckBox.UseVisualStyleBackColor = true;
+            this.EndDateCheckBox.CheckedChanged += new System.EventHandler(this.EndDateCheckBox_CheckedChanged);
+            // 
+            // panel3
+            // 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.label6);
+            this.panel3.Controls.Add(this.EndDateListBox2);
+            this.panel3.Controls.Add(this.label10);
+            this.panel3.Controls.Add(this.EndDateListBox1);
+            this.panel3.Location = new System.Drawing.Point(668, 78);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(250, 121);
+            this.panel3.TabIndex = 19;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(8, 79);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(32, 20);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "По:";
+            // 
+            // EndDateListBox2
+            // 
+            this.EndDateListBox2.Enabled = false;
+            this.EndDateListBox2.Location = new System.Drawing.Point(46, 74);
+            this.EndDateListBox2.Name = "EndDateListBox2";
+            this.EndDateListBox2.Size = new System.Drawing.Size(182, 27);
+            this.EndDateListBox2.TabIndex = 6;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(19, 35);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(21, 20);
+            this.label10.TabIndex = 5;
+            this.label10.Text = "С:";
+            // 
+            // EndDateListBox1
+            // 
+            this.EndDateListBox1.Enabled = false;
+            this.EndDateListBox1.Location = new System.Drawing.Point(46, 30);
+            this.EndDateListBox1.Name = "EndDateListBox1";
+            this.EndDateListBox1.Size = new System.Drawing.Size(182, 27);
+            this.EndDateListBox1.TabIndex = 4;
+            // 
+            // StartDateCheckBox
+            // 
+            this.StartDateCheckBox.AutoSize = true;
+            this.StartDateCheckBox.Location = new System.Drawing.Point(352, 66);
+            this.StartDateCheckBox.Name = "StartDateCheckBox";
+            this.StartDateCheckBox.Size = new System.Drawing.Size(154, 24);
+            this.StartDateCheckBox.TabIndex = 18;
+            this.StartDateCheckBox.Text = "Дата заключения:";
+            this.StartDateCheckBox.UseVisualStyleBackColor = true;
+            this.StartDateCheckBox.CheckedChanged += new System.EventHandler(this.StartDateCheckBox_CheckedChanged);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(694, 27);
+            this.label7.Location = new System.Drawing.Point(63, 134);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(149, 20);
             this.label7.TabIndex = 16;
             this.label7.Text = "Сумма по договору:";
             // 
-            // textBox1
+            // panel2
             // 
-            this.textBox1.Location = new System.Drawing.Point(694, 51);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(182, 27);
-            this.textBox1.TabIndex = 15;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.label9);
+            this.panel2.Controls.Add(this.StartDateListBox2);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.StartDateListBox1);
+            this.panel2.Location = new System.Drawing.Point(352, 78);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(250, 121);
+            this.panel2.TabIndex = 17;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(8, 79);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(32, 20);
+            this.label9.TabIndex = 7;
+            this.label9.Text = "По:";
+            // 
+            // StartDateListBox2
+            // 
+            this.StartDateListBox2.Enabled = false;
+            this.StartDateListBox2.Location = new System.Drawing.Point(46, 74);
+            this.StartDateListBox2.Name = "StartDateListBox2";
+            this.StartDateListBox2.Size = new System.Drawing.Size(182, 27);
+            this.StartDateListBox2.TabIndex = 6;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(19, 35);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(21, 20);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "С:";
+            // 
+            // StartDateListBox1
+            // 
+            this.StartDateListBox1.Enabled = false;
+            this.StartDateListBox1.Location = new System.Drawing.Point(46, 30);
+            this.StartDateListBox1.Name = "StartDateListBox1";
+            this.StartDateListBox1.Size = new System.Drawing.Size(182, 27);
+            this.StartDateListBox1.TabIndex = 4;
+            // 
+            // SummaryTextBox
+            // 
+            this.SummaryTextBox.Location = new System.Drawing.Point(63, 158);
+            this.SummaryTextBox.Name = "SummaryTextBox";
+            this.SummaryTextBox.Size = new System.Drawing.Size(182, 27);
+            this.SummaryTextBox.TabIndex = 15;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(694, 99);
+            this.label5.Location = new System.Drawing.Point(63, 188);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(55, 20);
             this.label5.TabIndex = 14;
             this.label5.Text = "Статус:";
             // 
-            // comboBox1
+            // StatusListBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.StatusListBox.FormattingEnabled = true;
+            this.StatusListBox.Items.AddRange(new object[] {
+            "Не выбрано",
             "Активен",
             "Завершен"});
-            this.comboBox1.Location = new System.Drawing.Point(694, 120);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(182, 28);
-            this.comboBox1.TabIndex = 13;
+            this.StatusListBox.Location = new System.Drawing.Point(63, 209);
+            this.StatusListBox.Name = "StatusListBox";
+            this.StatusListBox.Size = new System.Drawing.Size(182, 28);
+            this.StatusListBox.TabIndex = 13;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(410, 29);
+            this.label8.Location = new System.Drawing.Point(63, 81);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(91, 20);
             this.label8.TabIndex = 12;
             this.label8.Text = "Контрагент:";
             // 
-            // CounterpartyTextBox
+            // CounteragentListBox
             // 
-            this.CounterpartyTextBox.FormattingEnabled = true;
-            this.CounterpartyTextBox.Location = new System.Drawing.Point(410, 51);
-            this.CounterpartyTextBox.Name = "CounterpartyTextBox";
-            this.CounterpartyTextBox.Size = new System.Drawing.Size(182, 28);
-            this.CounterpartyTextBox.TabIndex = 11;
-            // 
-            // DateOfEndTextBox
-            // 
-            this.DateOfEndTextBox.Location = new System.Drawing.Point(410, 122);
-            this.DateOfEndTextBox.Name = "DateOfEndTextBox";
-            this.DateOfEndTextBox.Size = new System.Drawing.Size(182, 27);
-            this.DateOfEndTextBox.TabIndex = 8;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(410, 100);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(124, 20);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "Дата окончания:";
-            // 
-            // DateOfConclusionTextBox
-            // 
-            this.DateOfConclusionTextBox.Location = new System.Drawing.Point(94, 122);
-            this.DateOfConclusionTextBox.Name = "DateOfConclusionTextBox";
-            this.DateOfConclusionTextBox.Size = new System.Drawing.Size(182, 27);
-            this.DateOfConclusionTextBox.TabIndex = 4;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(94, 100);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(132, 20);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Дата заключения:";
+            this.CounteragentListBox.FormattingEnabled = true;
+            this.CounteragentListBox.Location = new System.Drawing.Point(63, 103);
+            this.CounteragentListBox.Name = "CounteragentListBox";
+            this.CounteragentListBox.Size = new System.Drawing.Size(182, 28);
+            this.CounteragentListBox.TabIndex = 11;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(94, 28);
+            this.label3.Location = new System.Drawing.Point(63, 27);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(130, 20);
             this.label3.TabIndex = 1;
@@ -252,7 +358,7 @@ namespace Logistic
             // 
             // TreatieNumberTextBox
             // 
-            this.TreatieNumberTextBox.Location = new System.Drawing.Point(94, 52);
+            this.TreatieNumberTextBox.Location = new System.Drawing.Point(63, 51);
             this.TreatieNumberTextBox.Name = "TreatieNumberTextBox";
             this.TreatieNumberTextBox.Size = new System.Drawing.Size(182, 27);
             this.TreatieNumberTextBox.TabIndex = 0;
@@ -268,7 +374,7 @@ namespace Logistic
             // 
             // EditButton
             // 
-            this.EditButton.Location = new System.Drawing.Point(11, 723);
+            this.EditButton.Location = new System.Drawing.Point(219, 810);
             this.EditButton.Name = "EditButton";
             this.EditButton.Size = new System.Drawing.Size(202, 37);
             this.EditButton.TabIndex = 4;
@@ -278,18 +384,28 @@ namespace Logistic
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(246, 723);
+            this.button2.Location = new System.Drawing.Point(427, 810);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(202, 37);
             this.button2.TabIndex = 5;
             this.button2.Text = "Удалить";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(11, 810);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(202, 37);
+            this.button3.TabIndex = 6;
+            this.button3.Text = "Экспортировать";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
             // TreatieRegistry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1003, 776);
+            this.ClientSize = new System.Drawing.Size(1003, 857);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.EditButton);
             this.Controls.Add(this.label2);
@@ -303,6 +419,10 @@ namespace Logistic
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -314,15 +434,12 @@ namespace Logistic
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button ExitButton;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox TreatieNumberTextBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox CounterpartyTextBox;
-        private System.Windows.Forms.DateTimePicker DateOfEndTextBox;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker DateOfConclusionTextBox;
+        private System.Windows.Forms.ComboBox CounteragentListBox;
+        private System.Windows.Forms.DateTimePicker StartDateListBox1;
         private System.Windows.Forms.Button EditButton;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridViewTextBoxColumn TreatieNumber;
@@ -332,8 +449,21 @@ namespace Logistic
         private System.Windows.Forms.DataGridViewTextBoxColumn Summary;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox SummaryTextBox;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox StatusListBox;
+        private System.Windows.Forms.Button ClearFilterButton;
+        private System.Windows.Forms.CheckBox EndDateCheckBox;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DateTimePicker EndDateListBox2;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.DateTimePicker EndDateListBox1;
+        private System.Windows.Forms.CheckBox StartDateCheckBox;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.DateTimePicker StartDateListBox2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button3;
     }
 }
