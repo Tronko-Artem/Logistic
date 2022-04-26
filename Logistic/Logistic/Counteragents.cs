@@ -28,5 +28,19 @@ namespace Logistic
             Form EditCounteragent = new EditCounteragent();
             EditCounteragent.Show();
         }
+
+        private void ClearFilterButton_Click(object sender, EventArgs e)
+        {
+            OrganizationNameTextBox.Text = "";
+            FioTextBox.Text = "";
+            LawAddressTextBox.Text = "";
+            MailAddressTextBox.Text = "";
+            InnTextBox.Text = "";
+            KppTextBox.Text = "";
+            CheckingAccountTextBox.Text = "";
+            CorrAccountTextBox.Text = "";
+            BikTextBox.Text = "";
+            OkpoTextBox.Text = "";
+        }
     }
 }
