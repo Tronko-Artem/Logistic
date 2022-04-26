@@ -64,6 +64,7 @@ namespace Logistic
             this.EditButton = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -151,6 +152,7 @@ namespace Logistic
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.ClearFilterButton);
             this.panel1.Controls.Add(this.EndDateCheckBox);
             this.panel1.Controls.Add(this.panel3);
@@ -171,18 +173,18 @@ namespace Logistic
             // 
             // ClearFilterButton
             // 
-            this.ClearFilterButton.Location = new System.Drawing.Point(881, 3);
+            this.ClearFilterButton.Location = new System.Drawing.Point(938, 3);
             this.ClearFilterButton.Name = "ClearFilterButton";
-            this.ClearFilterButton.Size = new System.Drawing.Size(87, 29);
+            this.ClearFilterButton.Size = new System.Drawing.Size(30, 29);
             this.ClearFilterButton.TabIndex = 21;
-            this.ClearFilterButton.Text = "Очистить";
+            this.ClearFilterButton.Text = "Х";
             this.ClearFilterButton.UseVisualStyleBackColor = true;
             this.ClearFilterButton.Click += new System.EventHandler(this.ClearFilterButton_Click);
             // 
             // EndDateCheckBox
             // 
             this.EndDateCheckBox.AutoSize = true;
-            this.EndDateCheckBox.Location = new System.Drawing.Point(668, 66);
+            this.EndDateCheckBox.Location = new System.Drawing.Point(660, 66);
             this.EndDateCheckBox.Name = "EndDateCheckBox";
             this.EndDateCheckBox.Size = new System.Drawing.Size(213, 24);
             this.EndDateCheckBox.TabIndex = 20;
@@ -197,7 +199,7 @@ namespace Logistic
             this.panel3.Controls.Add(this.EndDateListBox2);
             this.panel3.Controls.Add(this.label10);
             this.panel3.Controls.Add(this.EndDateListBox1);
-            this.panel3.Location = new System.Drawing.Point(668, 78);
+            this.panel3.Location = new System.Drawing.Point(660, 78);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(250, 121);
             this.panel3.TabIndex = 19;
@@ -239,7 +241,7 @@ namespace Logistic
             // StartDateCheckBox
             // 
             this.StartDateCheckBox.AutoSize = true;
-            this.StartDateCheckBox.Location = new System.Drawing.Point(352, 66);
+            this.StartDateCheckBox.Location = new System.Drawing.Point(344, 66);
             this.StartDateCheckBox.Name = "StartDateCheckBox";
             this.StartDateCheckBox.Size = new System.Drawing.Size(154, 24);
             this.StartDateCheckBox.TabIndex = 18;
@@ -263,7 +265,7 @@ namespace Logistic
             this.panel2.Controls.Add(this.StartDateListBox2);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.StartDateListBox1);
-            this.panel2.Location = new System.Drawing.Point(352, 78);
+            this.panel2.Location = new System.Drawing.Point(344, 78);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(250, 121);
             this.panel2.TabIndex = 17;
@@ -306,7 +308,7 @@ namespace Logistic
             // 
             this.SummaryTextBox.Location = new System.Drawing.Point(63, 158);
             this.SummaryTextBox.Name = "SummaryTextBox";
-            this.SummaryTextBox.Size = new System.Drawing.Size(182, 27);
+            this.SummaryTextBox.Size = new System.Drawing.Size(198, 27);
             this.SummaryTextBox.TabIndex = 15;
             // 
             // label5
@@ -327,7 +329,7 @@ namespace Logistic
             "Завершен"});
             this.StatusListBox.Location = new System.Drawing.Point(63, 209);
             this.StatusListBox.Name = "StatusListBox";
-            this.StatusListBox.Size = new System.Drawing.Size(182, 28);
+            this.StatusListBox.Size = new System.Drawing.Size(198, 28);
             this.StatusListBox.TabIndex = 13;
             // 
             // label8
@@ -344,7 +346,7 @@ namespace Logistic
             this.CounteragentListBox.FormattingEnabled = true;
             this.CounteragentListBox.Location = new System.Drawing.Point(63, 103);
             this.CounteragentListBox.Name = "CounteragentListBox";
-            this.CounteragentListBox.Size = new System.Drawing.Size(182, 28);
+            this.CounteragentListBox.Size = new System.Drawing.Size(198, 28);
             this.CounteragentListBox.TabIndex = 11;
             // 
             // label3
@@ -360,7 +362,7 @@ namespace Logistic
             // 
             this.TreatieNumberTextBox.Location = new System.Drawing.Point(63, 51);
             this.TreatieNumberTextBox.Name = "TreatieNumberTextBox";
-            this.TreatieNumberTextBox.Size = new System.Drawing.Size(182, 27);
+            this.TreatieNumberTextBox.Size = new System.Drawing.Size(198, 27);
             this.TreatieNumberTextBox.TabIndex = 0;
             // 
             // label2
@@ -399,6 +401,15 @@ namespace Logistic
             this.button3.TabIndex = 6;
             this.button3.Text = "Экспортировать";
             this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(817, 223);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(151, 29);
+            this.button1.TabIndex = 22;
+            this.button1.Text = "Найти";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // TreatieRegistry
             // 
@@ -465,5 +476,6 @@ namespace Logistic
         private System.Windows.Forms.DateTimePicker StartDateListBox2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button1;
     }
 }
