@@ -1,3 +1,9 @@
+﻿/*
+Created: 17.02.2022
+Modified: 27.04.2022
+Model: MySQL 8.0
+Database: MySQL 8.0
+*/
 
 -- Create tables section -------------------------------------------------
 
@@ -40,7 +46,7 @@ CREATE TABLE `Customer`
   `Checking_Account` Bigint NOT NULL,
   `Korr_Account` Bigint NOT NULL,
   `BIK` Bigint NOT NULL,
-  `OKPO` Bigint NOT NULL,
+  `ID_OKPO` Bigint NOT NULL,
   `ID_FIAS` Bigint
 )
 ;
@@ -67,11 +73,11 @@ ALTER TABLE `OKEI` ADD PRIMARY KEY (`ID_OKEI`)
 
 CREATE TABLE `OKPO`
 (
-  `OKPO` Bigint NOT NULL
+  `ID_OKPO` Bigint NOT NULL
 )
 ;
 
-ALTER TABLE `OKPO` ADD PRIMARY KEY (`OKPO`)
+ALTER TABLE `OKPO` ADD PRIMARY KEY (`ID_OKPO`)
 ;
 
 -- Table Orders
@@ -131,7 +137,7 @@ ALTER TABLE `FIAS` ADD PRIMARY KEY (`ID_FIAS`)
 ALTER TABLE `Treaties` ADD CONSTRAINT `Relationship1` FOREIGN KEY (`ID_Customer`) REFERENCES `Customer` (`ID_Customer`) ON DELETE RESTRICT ON UPDATE RESTRICT
 ;
 
-ALTER TABLE `Customer` ADD CONSTRAINT `Relationship41` FOREIGN KEY (`OKPO`) REFERENCES `OKPO` (`OKPO`) ON DELETE RESTRICT ON UPDATE RESTRICT
+ALTER TABLE `Customer` ADD CONSTRAINT `Relationship41` FOREIGN KEY (`ID_OKPO`) REFERENCES `OKPO` (`ID_OKPO`) ON DELETE RESTRICT ON UPDATE RESTRICT
 ;
 
 ALTER TABLE `Orders` ADD CONSTRAINT `Relationship45` FOREIGN KEY (`ID_Treatie`) REFERENCES `Treaties` (`ID_Treatie`) ON DELETE RESTRICT ON UPDATE RESTRICT
