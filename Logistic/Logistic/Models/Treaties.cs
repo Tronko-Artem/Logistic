@@ -24,7 +24,7 @@ namespace Logistic.Models
         public DateTime Start_Date { get; set; }
         public DateTime End_Date { get; set; }
         public decimal Summary { get; set; }
-        public string Address { get; set; }
+        public string Status { get; set; }
         public int Claims_Days { get; set; }
         public int Swap_Days { get; set; }
         public int Supply_Delay { get; set; }
