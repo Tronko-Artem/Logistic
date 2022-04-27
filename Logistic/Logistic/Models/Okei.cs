@@ -10,23 +10,21 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Logistic.Models
 {
-
     public partial class LogisticContext : DbContext
     {
-        public DbSet<Fias> FiasList { get; set; }
+        public DbSet<Okei> OkeiList { get; set; }
     }
 
-    [Table("fias")]
-    public class Fias
+    [Table("okei")]
+    public class Okei
     {
         [Key]
-        public int ID_FIAS { get; set; }
-
-        public string Address_Of_Reciever { get; set; }
+        public int ID_OKEI { get; set; }
+        public string Unit { get; set; }
 
         public override string ToString()
         {
-            return Address_Of_Reciever;
+            return Unit;
         }
 
     }
