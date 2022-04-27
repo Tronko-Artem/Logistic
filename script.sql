@@ -1,23 +1,16 @@
-﻿/*
-Created: 17.02.2022
-Modified: 27.04.2022
-Model: MySQL 8.0
-Database: MySQL 8.0
-*/
-
--- Create tables section -------------------------------------------------
+﻿-- Create tables section -------------------------------------------------
 
 -- Table Treaties
 
 CREATE TABLE `Treaties`
 (
   `ID_Treatie` Bigint NOT NULL,
-  `Number_Of_Treatie` Bigint NOT NULL,
+  `Number_Of_Treatie` Text NOT NULL,
   `Start_Date` Date NOT NULL,
   `End_Date` Date NOT NULL,
   `ID_Customer` Bigint NOT NULL,
-  `Summary` Bigint NOT NULL,
-  `Status` Bigint NOT NULL,
+  `Summary` Float NOT NULL,
+  `Status` Text NOT NULL,
   `Claims_Days` Int NOT NULL,
   `Swap_Days` Int NOT NULL,
   `Supply_Delay` Int NOT NULL,
@@ -41,13 +34,13 @@ CREATE TABLE `Customer`
   `Director_FIO` Text NOT NULL,
   `Law_Address` Text NOT NULL,
   `Mail_Address` Text NOT NULL,
-  `INN` Bigint NOT NULL,
-  `KPP` Bigint NOT NULL,
-  `Checking_Account` Bigint NOT NULL,
-  `Korr_Account` Bigint NOT NULL,
-  `BIK` Bigint NOT NULL,
+  `INN` Text NOT NULL,
+  `KPP` Text NOT NULL,
+  `Checking_Account` Text NOT NULL,
+  `Korr_Account` Text NOT NULL,
+  `BIK` Text NOT NULL,
   `ID_OKPO` Bigint NOT NULL,
-  `ID_FIAS` Bigint
+  `ID_FIAS` Bigint NOT NULL
 )
 ;
 
@@ -85,10 +78,10 @@ ALTER TABLE `OKPO` ADD PRIMARY KEY (`ID_OKPO`)
 CREATE TABLE `Orders`
 (
   `ID_Order` Bigint NOT NULL,
-  `Nubmer_Of_Order` Int NOT NULL,
+  `Nubmer_Of_Order` Text NOT NULL,
   `Start_Date` Date NOT NULL,
   `ID_Treatie` Bigint NOT NULL,
-  `Summary` Int NOT NULL,
+  `Summary` Float NOT NULL,
   `Address` Text NOT NULL
 )
 ;
@@ -103,21 +96,22 @@ ALTER TABLE `Orders` ADD PRIMARY KEY (`ID_Order`)
 
 CREATE TABLE `Goods_In_Order`
 (
+  `ID_Goods_In_Order` Bigint NOT NULL,
   `ID_Order` Bigint NOT NULL,
   `Name` Text NOT NULL,
   `Usability` Text,
   `Requierements` Text,
   `Vendor_Code` Text,
-  `Price` Bigint NOT NULL,
-  `Amount` Text NOT NULL,
-  `ID_OKEI` Bigint
+  `Price` Float NOT NULL,
+  `Amount` Float NOT NULL,
+  `ID_OKEI` Bigint NOT NULL
 )
 ;
 
 CREATE INDEX `IX_Relationship34` ON `Goods_In_Order` (`ID_OKEI`)
 ;
 
-ALTER TABLE `Goods_In_Order` ADD PRIMARY KEY (`ID_Order`)
+ALTER TABLE `Goods_In_Order` ADD PRIMARY KEY (`ID_Goods_In_Order`)
 ;
 
 -- Table FIAS
