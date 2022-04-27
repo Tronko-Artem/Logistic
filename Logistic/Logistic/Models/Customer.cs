@@ -12,7 +12,7 @@ namespace Logistic.Models
 {
     public partial class LogisticContext : DbContext
     {
-        public DbSet<Customer> Customers { get; set; }
+        public DbSet<Customer> CustomersList { get; set; }
     }
 
     [Table("customer")]
@@ -25,11 +25,11 @@ namespace Logistic.Models
         public string Director_FIO { get; set; }
         public string Law_Address { get; set; }
         public string Mail_Address { get; set; }
-        public int INN { get; set; }
-        public int KPP { get; set; }
-        public int Checking_Account { get; set; }
-        public int Korr_Account { get; set; }
-        public int BIK { get; set; }
+        public string INN { get; set; }
+        public string KPP { get; set; }
+        public string Checking_Account { get; set; }
+        public string Korr_Account { get; set; }
+        public string BIK { get; set; }
 
         [ForeignKey("ID_OKPO")]
         public int ID_OKPO { get; set; }
@@ -37,12 +37,12 @@ namespace Logistic.Models
         [ForeignKey("ID_FIAS")]
         public int ID_FIAS { get; set; }
 
-        public Okpo OKPO { get { return Program.db.Okpos.Find( ID_OKPO ); } }
-        public Fias Fias { get { return Program.db.Fiases.Find( ID_FIAS ); } }
+        public Okpo okpo { get { return Program.db.OkpoList.Find( ID_OKPO ); } }
+        public Fias fias { get { return Program.db.FiasList.Find( ID_FIAS ); } }
 
         public override string ToString()
         {
-            return OKPO.ToString();
+            return Organization_Name;
         }
 
     }

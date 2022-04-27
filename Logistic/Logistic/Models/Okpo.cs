@@ -12,7 +12,7 @@ namespace Logistic.Models
 {
     public partial class LogisticContext : DbContext
     {
-        public DbSet<Okpo> Okpos { get; set; }
+        public DbSet<Okpo> OkpoList { get; set; }
     }
 
     [Table("okpo")]
