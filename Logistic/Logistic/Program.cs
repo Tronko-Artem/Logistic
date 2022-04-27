@@ -4,16 +4,22 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using Logistic.Models;
+
 namespace Logistic
 {
     static class Program
     {
+
+        public static LogisticContext db;
+
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>
         [STAThread]
         static void Main()
         {
+            db = new LogisticContext();
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

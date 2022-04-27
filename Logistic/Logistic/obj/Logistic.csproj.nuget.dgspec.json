@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\1\\Desktop\\Logistic\\Logistic\\Logistic\\Logistic.csproj": {}
+    "D:\\Logistic\\Logistic\\Logistic\\Logistic.csproj": {}
   },
   "projects": {
-    "C:\\Users\\1\\Desktop\\Logistic\\Logistic\\Logistic\\Logistic.csproj": {
+    "D:\\Logistic\\Logistic\\Logistic\\Logistic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\1\\Desktop\\Logistic\\Logistic\\Logistic\\Logistic.csproj",
+        "projectUniqueName": "D:\\Logistic\\Logistic\\Logistic\\Logistic.csproj",
         "projectName": "Logistic",
-        "projectPath": "C:\\Users\\1\\Desktop\\Logistic\\Logistic\\Logistic\\Logistic.csproj",
-        "packagesPath": "C:\\Users\\1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\1\\Desktop\\Logistic\\Logistic\\Logistic\\obj\\",
+        "projectPath": "D:\\Logistic\\Logistic\\Logistic\\Logistic.csproj",
+        "packagesPath": "C:\\Users\\hunte\\.nuget\\packages\\",
+        "outputPath": "D:\\Logistic\\Logistic\\Logistic\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\hunte\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -42,7 +42,15 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[5.0.16, )"
+              "version": "[3.1.24, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.29, )"
+            },
+            "MySql.Data.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.22, )"
             }
           },
           "imports": [
@@ -63,7 +71,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
         }
       }
     }
