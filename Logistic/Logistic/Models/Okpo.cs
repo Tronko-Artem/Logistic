@@ -21,9 +21,11 @@ namespace Logistic.Models
         [Key]
         public int ID_OKPO { get; set; }
 
+        public string OKPO { get; set; }
+
         public override string ToString()
         {
-            return ID_OKPO.ToString();
+            return OKPO;
         }
 
     }
