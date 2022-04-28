@@ -254,7 +254,7 @@ namespace Logistic
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(247, 38);
             this.CancelButton.TabIndex = 23;
-            this.CancelButton.Text = "Отмена";
+            this.CancelButton.Text = "Закрыть";
             this.CancelButton.UseVisualStyleBackColor = true;
             this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 

@@ -14,8 +14,9 @@ namespace Logistic
 {
     public partial class AddCounteragent : Form
     {
+        private Customer EditCustomer = null;
 
-        public AddCounteragent()
+        public AddCounteragent( Customer customer = null  )
         {
             InitializeComponent();
 
@@ -25,6 +26,31 @@ namespace Logistic
             OkpoComboBox.DataSource = okpos;
             OkpoComboBox.AutoCompleteCustomSource.AddRange( okpos.Select(i => i.ID_OKPO.ToString() ).ToArray() ) ;
             OkpoComboBox.SelectedIndex = -1;
+
+            if( customer != null )
+            {
+                this.Text = "Редактировать клиента";
+                this.AddButton.Text = "Изменить";
+
+                OrganizationNameTextBox.Text = customer.Organization_Name;
+                OrganizationFormTextBox.Text = customer.Organization_Form;
+                FioTextBox.Text = customer.Director_FIO;
+                LawAddressTextBox.Text = customer.Law_Address;
+                MailAddressTextBox.Text = customer.Mail_Address;
+                InnTextBox.Text = customer.INN;
+                KppTextBox.Text = customer.KPP;
+                CheckingAccountTextBox.Text = customer.Checking_Account;
+                CorrAccountTextBox.Text = customer.Korr_Account;
+                BikTextBox.Text = customer.BIK;
+
+                Okpo okpo = Program.db.OkpoList.Find( customer.ID_OKPO );
+                OkpoComboBox.SelectedItem = okpo;
+
+                //Fias fias = Program.db.FiasList.Find( customer.ID_FIAS );
+                //FiasComboBox.SelectedItem = fias;
+            }
+
+            this.EditCustomer = customer;
         }
 
         private void CancelButton_Click(object sender, EventArgs e)
@@ -32,50 +58,67 @@ namespace Logistic
             Close();
         }
 
-        private bool addNewCustomer()
+        private bool addOrEditNewCustomer()
         {
             if ( String.IsNullOrWhiteSpace( OrganizationNameTextBox.Text ) ||
                 String.IsNullOrWhiteSpace( OrganizationFormTextBox.Text ) ||
                 String.IsNullOrWhiteSpace( FioTextBox.Text ) ||
                 String.IsNullOrWhiteSpace( LawAddressTextBox.Text ) ||
+                String.IsNullOrWhiteSpace( MailAddressTextBox.Text ) ||
                 String.IsNullOrWhiteSpace( InnTextBox.Text ) ||
                 String.IsNullOrWhiteSpace( KppTextBox.Text ) ||
                 String.IsNullOrWhiteSpace( CheckingAccountTextBox.Text ) ||
+                String.IsNullOrWhiteSpace( CorrAccountTextBox.Text ) ||
                 String.IsNullOrWhiteSpace( BikTextBox.Text ) ||
                 OkpoComboBox.SelectedItem == null || OkpoComboBox.SelectedIndex == -1 // ||
-                //FiasCombobox.SelectedItem == null || FiasCombobox.SelectedIndex == -1)
+                //FiasComboBox.SelectedItem == null || FiasComboBox.SelectedIndex == -1)
                 )
             {
                 MessageBox.Show("Чтобы добавить запись заполните все поля!", "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return false;
             }
 
-            Customer newCustomer = new Customer();
+            bool EditMode = this.EditCustomer != null;
 
-            newCustomer.Organization_Name = this.OrganizationNameTextBox.Text;
-            newCustomer.Organization_Form = this.OrganizationFormTextBox.Text;
-            newCustomer.Director_FIO = this.FioTextBox.Text;
-            newCustomer.Law_Address = this.LawAddressTextBox.Text;
-            newCustomer.Mail_Address = this.InnTextBox.Text;
-            newCustomer.KPP = this.KppTextBox.Text;
-            newCustomer.INN = this.InnTextBox.Text;
-            newCustomer.Checking_Account = this.CheckingAccountTextBox.Text;
-            newCustomer.Korr_Account = this.CorrAccountTextBox.Text;
-            newCustomer.BIK = this.BikTextBox.Text;
-            newCustomer.ID_OKPO = ( ( Okpo )this.OkpoComboBox.SelectedItem ).ID_OKPO;
-            newCustomer.ID_FIAS = 1; // ( ( Fias )this.FiasCombobox.SelectedItem ).ID_FIAS;
+            if (!EditMode)
+                this.EditCustomer = new Customer();
 
 
-            Program.db.CustomersList.Add( newCustomer );
+            this.EditCustomer.Organization_Name = this.OrganizationNameTextBox.Text;
+            this.EditCustomer.Organization_Form = this.OrganizationFormTextBox.Text;
+            this.EditCustomer.Director_FIO = this.FioTextBox.Text;
+            this.EditCustomer.Law_Address = this.LawAddressTextBox.Text;
+            this.EditCustomer.Mail_Address = this.MailAddressTextBox.Text;
+            this.EditCustomer.KPP = this.KppTextBox.Text;
+            this.EditCustomer.INN = this.InnTextBox.Text;
+            this.EditCustomer.Checking_Account = this.CheckingAccountTextBox.Text;
+            this.EditCustomer.Korr_Account = this.CorrAccountTextBox.Text;
+            this.EditCustomer.BIK = this.BikTextBox.Text;
+            this.EditCustomer.ID_OKPO = ( ( Okpo )this.OkpoComboBox.SelectedItem ).ID_OKPO;
+            this.EditCustomer.ID_FIAS = 1; // ( ( Fias )this.FiasComboBox.SelectedItem ).ID_FIAS;
+
+
+            if( EditMode )
+            {
+                Program.db.CustomersList.Update( this.EditCustomer );
+                MessageBox.Show( "Успешно изменено!", "Успех!", MessageBoxButtons.OK, MessageBoxIcon.Information );
+            }
+            else
+            { 
+                Program.db.CustomersList.Add( this.EditCustomer );
+                MessageBox.Show( "Успешно добавлено!", "Успех!", MessageBoxButtons.OK, MessageBoxIcon.Information );
+                
+                // раскомментировать, если форма не будет закрываться после добавления
+                // this.EditCustomer = null;
+            }
+
             Program.db.SaveChanges();
-            MessageBox.Show("Успешно добавлено!", "Успех!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
             return true;
         }
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-            addNewCustomer();
+            addOrEditNewCustomer();
         }
     }
 }

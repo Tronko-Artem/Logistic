@@ -49,8 +49,21 @@ namespace Logistic
 
         private void EditCounteragentButton_Click(object sender, EventArgs e)
         {
-            Form EditCounteragent = new EditCounteragent();
-            EditCounteragent.Show();
+            int ID_Customer = -1;
+            try
+            {
+                ID_Customer = Convert.ToInt32( dataGridView1.SelectedRows[0].Cells[0].Value );
+            }
+            catch ( Exception exception )
+            {
+                MessageBox.Show("Выберите запись, которую нужно изменить", "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            Customer customer = Program.db.CustomersList.Find( ID_Customer );
+
+            if( customer != null )
+                new AddCounteragent( customer ).ShowDialog();
+
         }
 
         private void ClearFilterButton_Click(object sender, EventArgs e)
