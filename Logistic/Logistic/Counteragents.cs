@@ -44,8 +44,7 @@ namespace Logistic
 
         private void AddCounteragentButton_Click(object sender, EventArgs e)
         {
-            Form AddCounteragent = new AddCounteragent();
-            AddCounteragent.Show();
+            new AddCounteragent().ShowDialog();
         }
 
         private void EditCounteragentButton_Click(object sender, EventArgs e)
@@ -88,7 +87,7 @@ namespace Logistic
             else
                 OkpoComboBox.SelectedItem = null;
 
-            //updateTable();
+            FindButton.PerformClick();
         }
 
         private void FindButton_Click(object sender, EventArgs e)
