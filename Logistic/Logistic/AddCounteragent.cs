@@ -108,8 +108,7 @@ namespace Logistic
                 Program.db.CustomersList.Add( this.EditCustomer );
                 MessageBox.Show( "Успешно добавлено!", "Успех!", MessageBoxButtons.OK, MessageBoxIcon.Information );
                 
-                // раскомментировать, если форма не будет закрываться после добавления
-                // this.EditCustomer = null;
+                this.EditCustomer = null;
             }
 
             Program.db.SaveChanges();

@@ -105,6 +105,12 @@ namespace Logistic
 
         private void FindButton_Click(object sender, EventArgs e)
         {
+            if( String.IsNullOrWhiteSpace( OkpoComboBox.Text ) )
+            {
+                OkpoComboBox.SelectedItem = null;
+                OkpoComboBox.SelectedIndex = -1;
+            }
+
             if( String.IsNullOrWhiteSpace( OrganizationNameTextBox.Text ) ) OrganizationNameTextBox.Text = "";
             if( String.IsNullOrWhiteSpace( FioTextBox.Text ) ) FioTextBox.Text = "";
             if( String.IsNullOrWhiteSpace( LawAddressTextBox.Text ) ) LawAddressTextBox.Text = "";
@@ -142,6 +148,61 @@ namespace Logistic
 
             dataGridView1.DataSource = searchResult;
             dataGridView1.ClearSelection();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            List<Customer> CustomersForRemove = new List<Customer>();
+
+            int ID_Customer = -1;
+            try
+            {
+                foreach ( DataGridViewRow row in dataGridView1.SelectedRows )
+                {
+                    ID_Customer = Convert.ToInt32( row.Cells[0].Value );
+                    Customer curCustomer = Program.db.CustomersList.Find( ID_Customer );
+
+                    if ( curCustomer != null )
+                        CustomersForRemove.Add( curCustomer );
+                }
+
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show( exception.Message );
+            }
+
+            if (MessageBox.Show("Вы действительно хотите удалить выбранных клиентов? Данное действие невозможно отменить!", "Внимание!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                return;
+
+
+            // нельзя удалять клиентов, с которыми существует договор!
+            // Оставим в списке тех, которых можно удалить
+            List<Customer> FilteredListToRemove = new List<Customer>();
+            List<int> IdCustomersWithTreties = Program.db.TreatiesList.Select( treatie => treatie.ID_Customer ).ToList();
+            bool check = false; // true - если найден клиент (среди удаляемых) с договором
+            foreach ( var customer in CustomersForRemove )
+            {
+                if ( IdCustomersWithTreties.Contains( customer.ID_Customer ) )
+                    check = true;
+                else
+                    FilteredListToRemove.Add( customer );
+            }
+
+            if ( FilteredListToRemove.Count() > 0 && check )
+            {
+                if (MessageBox.Show("Среди выбранных клиентов есть те, с кем заключен договор! Чтобы удалить клиента, сначала удалите соответствующий договор!\n\nУдалить клиентов, которые не вызвали такого конфликта?", "Внимание!", MessageBoxButtons.YesNo, MessageBoxIcon.Question ) == DialogResult.No)
+                    return;
+            }
+            else if ( FilteredListToRemove.Count() == 0 && check )
+                MessageBox.Show("Невозможно выполнить удаление. Выбранное оборудование приобретено в лизинг!");
+
+            // deleting
+            foreach (var item in FilteredListToRemove )
+                Program.db.Remove( item );
+
+            Program.db.SaveChanges();
+            this.FindButton.PerformClick();
         }
     }
 }

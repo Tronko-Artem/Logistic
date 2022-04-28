@@ -47,6 +47,7 @@ namespace Logistic
             this.EditCounteragentButton = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.OkpoComboBox = new System.Windows.Forms.ComboBox();
             this.ClearFilterButton = new System.Windows.Forms.Button();
             this.FindButton = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
@@ -69,7 +70,6 @@ namespace Logistic
             this.label3 = new System.Windows.Forms.Label();
             this.OrganizationNameTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.OkpoComboBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -228,6 +228,7 @@ namespace Logistic
             this.button3.TabIndex = 4;
             this.button3.Text = "Удалить";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // panel1
             // 
@@ -259,6 +260,14 @@ namespace Logistic
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1047, 145);
             this.panel1.TabIndex = 5;
+            // 
+            // OkpoComboBox
+            // 
+            this.OkpoComboBox.FormattingEnabled = true;
+            this.OkpoComboBox.Location = new System.Drawing.Point(850, 88);
+            this.OkpoComboBox.Name = "OkpoComboBox";
+            this.OkpoComboBox.Size = new System.Drawing.Size(166, 23);
+            this.OkpoComboBox.TabIndex = 11;
             // 
             // ClearFilterButton
             // 
@@ -452,14 +461,6 @@ namespace Logistic
             this.label2.Size = new System.Drawing.Size(48, 15);
             this.label2.TabIndex = 6;
             this.label2.Text = "Фильтр";
-            // 
-            // OkpoComboBox
-            // 
-            this.OkpoComboBox.FormattingEnabled = true;
-            this.OkpoComboBox.Location = new System.Drawing.Point(850, 88);
-            this.OkpoComboBox.Name = "OkpoComboBox";
-            this.OkpoComboBox.Size = new System.Drawing.Size(166, 23);
-            this.OkpoComboBox.TabIndex = 11;
             // 
             // Counteragents
             // 
