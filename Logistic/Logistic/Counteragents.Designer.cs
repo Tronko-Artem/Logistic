@@ -31,6 +31,18 @@ namespace Logistic
         {
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ID_Customer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OrganizationName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OrganizationType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DirectorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OrganizationAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OrganizationMailAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OrganizationINN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OrganizationKPP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OrganizationCheckingAccount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OrganizationCorrespondentAccount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OrganizationBIK = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OrganizationOKPO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AddCounteragentButton = new System.Windows.Forms.Button();
             this.EditCounteragentButton = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -39,7 +51,6 @@ namespace Logistic
             this.FindButton = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.OkpoTextBox = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.BikTextBox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -58,18 +69,7 @@ namespace Logistic
             this.label3 = new System.Windows.Forms.Label();
             this.OrganizationNameTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.ID_Customer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OrganizationName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OrganizationType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DirectorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OrganizationAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OrganizationMailAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OrganizationINN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OrganizationKPP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OrganizationCheckingAccount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OrganizationCorrespondentAccount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OrganizationBIK = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OrganizationOKPO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OkpoComboBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -110,8 +110,92 @@ namespace Logistic
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(1047, 280);
             this.dataGridView1.TabIndex = 1;
+            // 
+            // ID_Customer
+            // 
+            this.ID_Customer.HeaderText = "";
+            this.ID_Customer.Name = "ID_Customer";
+            this.ID_Customer.ReadOnly = true;
+            // 
+            // OrganizationName
+            // 
+            this.OrganizationName.HeaderText = "Название организации";
+            this.OrganizationName.MinimumWidth = 6;
+            this.OrganizationName.Name = "OrganizationName";
+            this.OrganizationName.ReadOnly = true;
+            // 
+            // OrganizationType
+            // 
+            this.OrganizationType.HeaderText = "Форма организации";
+            this.OrganizationType.MinimumWidth = 6;
+            this.OrganizationType.Name = "OrganizationType";
+            this.OrganizationType.ReadOnly = true;
+            // 
+            // DirectorName
+            // 
+            this.DirectorName.HeaderText = "ФИО директора";
+            this.DirectorName.MinimumWidth = 6;
+            this.DirectorName.Name = "DirectorName";
+            this.DirectorName.ReadOnly = true;
+            // 
+            // OrganizationAddress
+            // 
+            this.OrganizationAddress.HeaderText = "Юридический адрес";
+            this.OrganizationAddress.MinimumWidth = 6;
+            this.OrganizationAddress.Name = "OrganizationAddress";
+            this.OrganizationAddress.ReadOnly = true;
+            // 
+            // OrganizationMailAddress
+            // 
+            this.OrganizationMailAddress.HeaderText = "Почтовый адрес";
+            this.OrganizationMailAddress.MinimumWidth = 6;
+            this.OrganizationMailAddress.Name = "OrganizationMailAddress";
+            this.OrganizationMailAddress.ReadOnly = true;
+            // 
+            // OrganizationINN
+            // 
+            this.OrganizationINN.HeaderText = "ИНН";
+            this.OrganizationINN.MinimumWidth = 6;
+            this.OrganizationINN.Name = "OrganizationINN";
+            this.OrganizationINN.ReadOnly = true;
+            // 
+            // OrganizationKPP
+            // 
+            this.OrganizationKPP.HeaderText = "КПП";
+            this.OrganizationKPP.MinimumWidth = 6;
+            this.OrganizationKPP.Name = "OrganizationKPP";
+            this.OrganizationKPP.ReadOnly = true;
+            // 
+            // OrganizationCheckingAccount
+            // 
+            this.OrganizationCheckingAccount.HeaderText = "Расчетный счет";
+            this.OrganizationCheckingAccount.MinimumWidth = 6;
+            this.OrganizationCheckingAccount.Name = "OrganizationCheckingAccount";
+            this.OrganizationCheckingAccount.ReadOnly = true;
+            // 
+            // OrganizationCorrespondentAccount
+            // 
+            this.OrganizationCorrespondentAccount.HeaderText = "Корреспондентский счет";
+            this.OrganizationCorrespondentAccount.MinimumWidth = 6;
+            this.OrganizationCorrespondentAccount.Name = "OrganizationCorrespondentAccount";
+            this.OrganizationCorrespondentAccount.ReadOnly = true;
+            // 
+            // OrganizationBIK
+            // 
+            this.OrganizationBIK.HeaderText = "БИК";
+            this.OrganizationBIK.MinimumWidth = 6;
+            this.OrganizationBIK.Name = "OrganizationBIK";
+            this.OrganizationBIK.ReadOnly = true;
+            // 
+            // OrganizationOKPO
+            // 
+            this.OrganizationOKPO.HeaderText = "ОКПО";
+            this.OrganizationOKPO.MinimumWidth = 6;
+            this.OrganizationOKPO.Name = "OrganizationOKPO";
+            this.OrganizationOKPO.ReadOnly = true;
             // 
             // AddCounteragentButton
             // 
@@ -148,11 +232,11 @@ namespace Logistic
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.OkpoComboBox);
             this.panel1.Controls.Add(this.ClearFilterButton);
             this.panel1.Controls.Add(this.FindButton);
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.OkpoTextBox);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.BikTextBox);
             this.panel1.Controls.Add(this.label9);
@@ -196,6 +280,7 @@ namespace Logistic
             this.FindButton.TabIndex = 9;
             this.FindButton.Text = "Найти";
             this.FindButton.UseVisualStyleBackColor = true;
+            this.FindButton.Click += new System.EventHandler(this.FindButton_Click);
             // 
             // label12
             // 
@@ -214,14 +299,6 @@ namespace Logistic
             this.label11.Size = new System.Drawing.Size(33, 15);
             this.label11.TabIndex = 8;
             this.label11.Text = "БИК:";
-            // 
-            // OkpoTextBox
-            // 
-            this.OkpoTextBox.Location = new System.Drawing.Point(850, 88);
-            this.OkpoTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.OkpoTextBox.Name = "OkpoTextBox";
-            this.OkpoTextBox.Size = new System.Drawing.Size(166, 23);
-            this.OkpoTextBox.TabIndex = 7;
             // 
             // label10
             // 
@@ -376,88 +453,13 @@ namespace Logistic
             this.label2.TabIndex = 6;
             this.label2.Text = "Фильтр";
             // 
-            // ID_Customer
+            // OkpoComboBox
             // 
-            this.ID_Customer.HeaderText = "";
-            this.ID_Customer.Name = "ID_Customer";
-            this.ID_Customer.ReadOnly = true;
-            // 
-            // OrganizationName
-            // 
-            this.OrganizationName.HeaderText = "Название организации";
-            this.OrganizationName.MinimumWidth = 6;
-            this.OrganizationName.Name = "OrganizationName";
-            this.OrganizationName.ReadOnly = true;
-            // 
-            // OrganizationType
-            // 
-            this.OrganizationType.HeaderText = "Форма организации";
-            this.OrganizationType.MinimumWidth = 6;
-            this.OrganizationType.Name = "OrganizationType";
-            this.OrganizationType.ReadOnly = true;
-            // 
-            // DirectorName
-            // 
-            this.DirectorName.HeaderText = "ФИО директора";
-            this.DirectorName.MinimumWidth = 6;
-            this.DirectorName.Name = "DirectorName";
-            this.DirectorName.ReadOnly = true;
-            // 
-            // OrganizationAddress
-            // 
-            this.OrganizationAddress.HeaderText = "Юридический адрес";
-            this.OrganizationAddress.MinimumWidth = 6;
-            this.OrganizationAddress.Name = "OrganizationAddress";
-            this.OrganizationAddress.ReadOnly = true;
-            // 
-            // OrganizationMailAddress
-            // 
-            this.OrganizationMailAddress.HeaderText = "Почтовый адрес";
-            this.OrganizationMailAddress.MinimumWidth = 6;
-            this.OrganizationMailAddress.Name = "OrganizationMailAddress";
-            this.OrganizationMailAddress.ReadOnly = true;
-            // 
-            // OrganizationINN
-            // 
-            this.OrganizationINN.HeaderText = "ИНН";
-            this.OrganizationINN.MinimumWidth = 6;
-            this.OrganizationINN.Name = "OrganizationINN";
-            this.OrganizationINN.ReadOnly = true;
-            // 
-            // OrganizationKPP
-            // 
-            this.OrganizationKPP.HeaderText = "КПП";
-            this.OrganizationKPP.MinimumWidth = 6;
-            this.OrganizationKPP.Name = "OrganizationKPP";
-            this.OrganizationKPP.ReadOnly = true;
-            // 
-            // OrganizationCheckingAccount
-            // 
-            this.OrganizationCheckingAccount.HeaderText = "Расчетный счет";
-            this.OrganizationCheckingAccount.MinimumWidth = 6;
-            this.OrganizationCheckingAccount.Name = "OrganizationCheckingAccount";
-            this.OrganizationCheckingAccount.ReadOnly = true;
-            // 
-            // OrganizationCorrespondentAccount
-            // 
-            this.OrganizationCorrespondentAccount.HeaderText = "Корреспондентский счет";
-            this.OrganizationCorrespondentAccount.MinimumWidth = 6;
-            this.OrganizationCorrespondentAccount.Name = "OrganizationCorrespondentAccount";
-            this.OrganizationCorrespondentAccount.ReadOnly = true;
-            // 
-            // OrganizationBIK
-            // 
-            this.OrganizationBIK.HeaderText = "БИК";
-            this.OrganizationBIK.MinimumWidth = 6;
-            this.OrganizationBIK.Name = "OrganizationBIK";
-            this.OrganizationBIK.ReadOnly = true;
-            // 
-            // OrganizationOKPO
-            // 
-            this.OrganizationOKPO.HeaderText = "ОКПО";
-            this.OrganizationOKPO.MinimumWidth = 6;
-            this.OrganizationOKPO.Name = "OrganizationOKPO";
-            this.OrganizationOKPO.ReadOnly = true;
+            this.OkpoComboBox.FormattingEnabled = true;
+            this.OkpoComboBox.Location = new System.Drawing.Point(850, 88);
+            this.OkpoComboBox.Name = "OkpoComboBox";
+            this.OkpoComboBox.Size = new System.Drawing.Size(166, 23);
+            this.OkpoComboBox.TabIndex = 11;
             // 
             // Counteragents
             // 
@@ -496,7 +498,6 @@ namespace Logistic
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox OkpoTextBox;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox BikTextBox;
         private System.Windows.Forms.Label label9;
@@ -528,5 +529,6 @@ namespace Logistic
         private System.Windows.Forms.DataGridViewTextBoxColumn OrganizationCorrespondentAccount;
         private System.Windows.Forms.DataGridViewTextBoxColumn OrganizationBIK;
         private System.Windows.Forms.DataGridViewTextBoxColumn OrganizationOKPO;
+        private System.Windows.Forms.ComboBox OkpoComboBox;
     }
 }
