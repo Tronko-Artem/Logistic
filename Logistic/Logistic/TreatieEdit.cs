@@ -86,6 +86,9 @@ namespace Logistic
                 supply = Int32.Parse(SupplyDaysTextBox.Text);
                 swap = Int32.Parse(SwapDaysTextBox.Text);
 
+                if ( fine < 0 || summary < 0 || claims < 0 || supply < 0 || swap < 0 )
+                    throw new Exception();
+
             }
             catch (Exception /*exception*/ )
             {
