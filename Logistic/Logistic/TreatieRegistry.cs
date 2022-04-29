@@ -180,7 +180,7 @@ namespace Logistic
                 if (ID_Customer != -1 && item.ID_Customer != ID_Customer)
                     continue;
                 
-                if( !item.Number_Of_Treatie.ToLower().Contains( TreatieNumberTextBox.Text ) )
+                if( !item.Number_Of_Treatie.ToLower().Contains( TreatieNumberTextBox.Text.ToLower() ) )
                     continue;
 
                 if( summary >= 0 && item.Summary != summary )
