@@ -197,5 +197,39 @@ namespace Logistic
             dataGridView1.ClearSelection();
             
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            List<Treatie> TreatiesForRemove = new List<Treatie>();
+
+            int ID_Treatie = -1;
+            try
+            {
+                foreach ( DataGridViewRow row in dataGridView1.SelectedRows )
+                {
+                    ID_Treatie = Convert.ToInt32( row.Cells[0].Value );
+                    Treatie curTreatie = Program.db.TreatiesList.Find( ID_Treatie );
+
+                    if ( curTreatie != null )
+                        TreatiesForRemove.Add( curTreatie );
+                }
+
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show( exception.Message );
+                return;
+            }
+
+            if (MessageBox.Show("Вы действительно хотите удалить выбранные договоры? Данное действие невозможно отменить!", "Внимание!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                return;
+
+            // deleting
+            foreach ( var item in TreatiesForRemove )
+                Program.db.Remove( item );
+
+            Program.db.SaveChanges();
+            FindButton.PerformClick();
+        }
     }
 }
