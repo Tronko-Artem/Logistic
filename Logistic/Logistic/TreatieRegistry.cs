@@ -96,6 +96,8 @@ namespace Logistic
             StatusListBox.SelectedItem = "Не выбрано";
             StartDateCheckBox.Checked = false;
             EndDateCheckBox.Checked = false;
+
+            FindButton.PerformClick();
         }
 
         private void ExportTreatieButton_Click(object sender, EventArgs e)
