@@ -25,7 +25,7 @@ namespace Logistic
             dataGridView1.Columns[1].DataPropertyName = "Number_Of_Treatie";
             dataGridView1.Columns[2].DataPropertyName = "Start_Date";
             dataGridView1.Columns[3].DataPropertyName = "End_Date";
-            dataGridView1.Columns[4].DataPropertyName = "ID_Customer";
+            dataGridView1.Columns[4].DataPropertyName = "Customer";
             dataGridView1.Columns[5].DataPropertyName = "Summary";
             dataGridView1.Columns[6].DataPropertyName = "Status";
         }
@@ -43,8 +43,20 @@ namespace Logistic
 
         private void EditButton_Click(object sender, EventArgs e)
         {
-            Form TreatieEdit = new TreatieEdit();
-            TreatieEdit.Show();
+            int ID_Treatie = -1;
+            try
+            {
+                ID_Treatie = Convert.ToInt32( dataGridView1.SelectedRows[0].Cells[0].Value );
+            }
+            catch ( Exception exception )
+            {
+                MessageBox.Show("Выберите запись, которую нужно изменить", "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            Treatie treatie = Program.db.TreatiesList.Find( ID_Treatie );
+
+            if( treatie != null )
+                new TreatieEdit( treatie ).ShowDialog();
         }
 
         private void StartDateCheckBox_CheckedChanged(object sender, EventArgs e)

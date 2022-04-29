@@ -26,7 +26,26 @@ namespace Logistic
             List<Customer> customers = Program.db.CustomersList.ToList();
             CounterAgentsComboBox.DataSource = customers;
             CounterAgentsComboBox.AutoCompleteCustomSource.AddRange( customers.Select(i => i.ToString() ).ToArray());
-            CounterAgentsComboBox.SelectedIndex = customers.Count > 0 ? 0 : -1;
+
+            this.EditTreatie = treatie;
+
+            Customer customer = Program.db.CustomersList.Find( EditTreatie.ID_Customer );
+            CounterAgentsComboBox.SelectedItem = customer;
+
+            TreatieNumberBox.Text = EditTreatie.Number_Of_Treatie; 
+            ClaimsDaysTextBox.Text = EditTreatie.Claims_Days.ToString();
+            SwapDaysTextBox.Text = EditTreatie.Swap_Days.ToString();
+            SupplyDaysTextBox.Text = EditTreatie.Supply_Delay.ToString();
+            FinetextBox.Text = EditTreatie.Fine.ToString();
+            SummaryTextBox.Text = EditTreatie.Summary.ToString();
+            ForceEntryDatePicker.Value = EditTreatie.Start_Date.Date;
+            UntilDatePicker.Value = EditTreatie.End_Date.Date;
+
+            foreach( string item in StatusComboBox.Items )
+            {
+                if ( EditTreatie.Status == item )
+                    StatusComboBox.SelectedItem = item;
+            }
 
             this.EditTreatie = treatie;
 
@@ -88,6 +107,16 @@ namespace Logistic
             Program.db.TreatiesList.Update( this.EditTreatie );
             MessageBox.Show( "Успешно изменено!", "Успех!", MessageBoxButtons.OK, MessageBoxIcon.Information );
             Program.db.SaveChanges();
+        }
+
+        private void CounterAgentsComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if ( this.CounterAgentsComboBox.SelectedItem != null && this.CounterAgentsComboBox.SelectedIndex > -1 )
+            {
+                this.OrganizationNameLabel.Text = ((Customer)this.CounterAgentsComboBox.SelectedItem).Organization_Name;
+                this.OrganizationDirectorLabel.Text = ((Customer)this.CounterAgentsComboBox.SelectedItem).Director_FIO;
+                this.OrganizationINNLabel.Text = ((Customer)this.CounterAgentsComboBox.SelectedItem).INN;
+            }
         }
     }
 }

@@ -48,6 +48,7 @@ namespace Logistic
             this.label22 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.CounterAgentsComboBox = new System.Windows.Forms.ComboBox();
             this.OrganizationINNLabel = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.OrganizationDirectorLabel = new System.Windows.Forms.Label();
@@ -75,7 +76,6 @@ namespace Logistic
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.CounterAgentsComboBox = new System.Windows.Forms.ComboBox();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -100,7 +100,7 @@ namespace Logistic
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(310, 34);
             this.CancelButton.TabIndex = 33;
-            this.CancelButton.Text = "Отмена";
+            this.CancelButton.Text = "Закрыть";
             this.CancelButton.UseVisualStyleBackColor = true;
             this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
@@ -278,6 +278,20 @@ namespace Logistic
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(310, 166);
             this.panel3.TabIndex = 44;
+            // 
+            // CounterAgentsComboBox
+            // 
+            this.CounterAgentsComboBox.FormattingEnabled = true;
+            this.CounterAgentsComboBox.Items.AddRange(new object[] {
+            "Активен",
+            "В ожидании",
+            "Завершен"});
+            this.CounterAgentsComboBox.Location = new System.Drawing.Point(126, 32);
+            this.CounterAgentsComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CounterAgentsComboBox.Name = "CounterAgentsComboBox";
+            this.CounterAgentsComboBox.Size = new System.Drawing.Size(170, 23);
+            this.CounterAgentsComboBox.TabIndex = 35;
+            this.CounterAgentsComboBox.SelectedIndexChanged += new System.EventHandler(this.CounterAgentsComboBox_SelectedIndexChanged);
             // 
             // OrganizationINNLabel
             // 
@@ -537,19 +551,6 @@ namespace Logistic
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(643, 76);
             this.panel5.TabIndex = 46;
-            // 
-            // CounterAgentsComboBox
-            // 
-            this.CounterAgentsComboBox.FormattingEnabled = true;
-            this.CounterAgentsComboBox.Items.AddRange(new object[] {
-            "Активен",
-            "В ожидании",
-            "Завершен"});
-            this.CounterAgentsComboBox.Location = new System.Drawing.Point(126, 32);
-            this.CounterAgentsComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.CounterAgentsComboBox.Name = "CounterAgentsComboBox";
-            this.CounterAgentsComboBox.Size = new System.Drawing.Size(170, 23);
-            this.CounterAgentsComboBox.TabIndex = 35;
             // 
             // TreatieEdit
             // 
