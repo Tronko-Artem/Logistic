@@ -31,18 +31,6 @@ namespace Logistic
         {
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ID_Customer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OrganizationName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OrganizationType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DirectorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OrganizationAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OrganizationMailAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OrganizationINN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OrganizationKPP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OrganizationCheckingAccount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OrganizationCorrespondentAccount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OrganizationBIK = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OrganizationOKPO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AddCounteragentButton = new System.Windows.Forms.Button();
             this.EditCounteragentButton = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -70,6 +58,18 @@ namespace Logistic
             this.label3 = new System.Windows.Forms.Label();
             this.OrganizationNameTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.ID_Customer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OrganizationName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OrganizationType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DirectorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OrganizationAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OrganizationMailAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OrganizationINN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OrganizationKPP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OrganizationCheckingAccount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OrganizationCorrespondentAccount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OrganizationBIK = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OrganizationOKPO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -113,89 +113,6 @@ namespace Logistic
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(1047, 280);
             this.dataGridView1.TabIndex = 1;
-            // 
-            // ID_Customer
-            // 
-            this.ID_Customer.HeaderText = "";
-            this.ID_Customer.Name = "ID_Customer";
-            this.ID_Customer.ReadOnly = true;
-            // 
-            // OrganizationName
-            // 
-            this.OrganizationName.HeaderText = "Название организации";
-            this.OrganizationName.MinimumWidth = 6;
-            this.OrganizationName.Name = "OrganizationName";
-            this.OrganizationName.ReadOnly = true;
-            // 
-            // OrganizationType
-            // 
-            this.OrganizationType.HeaderText = "Форма организации";
-            this.OrganizationType.MinimumWidth = 6;
-            this.OrganizationType.Name = "OrganizationType";
-            this.OrganizationType.ReadOnly = true;
-            // 
-            // DirectorName
-            // 
-            this.DirectorName.HeaderText = "ФИО директора";
-            this.DirectorName.MinimumWidth = 6;
-            this.DirectorName.Name = "DirectorName";
-            this.DirectorName.ReadOnly = true;
-            // 
-            // OrganizationAddress
-            // 
-            this.OrganizationAddress.HeaderText = "Юридический адрес";
-            this.OrganizationAddress.MinimumWidth = 6;
-            this.OrganizationAddress.Name = "OrganizationAddress";
-            this.OrganizationAddress.ReadOnly = true;
-            // 
-            // OrganizationMailAddress
-            // 
-            this.OrganizationMailAddress.HeaderText = "Почтовый адрес";
-            this.OrganizationMailAddress.MinimumWidth = 6;
-            this.OrganizationMailAddress.Name = "OrganizationMailAddress";
-            this.OrganizationMailAddress.ReadOnly = true;
-            // 
-            // OrganizationINN
-            // 
-            this.OrganizationINN.HeaderText = "ИНН";
-            this.OrganizationINN.MinimumWidth = 6;
-            this.OrganizationINN.Name = "OrganizationINN";
-            this.OrganizationINN.ReadOnly = true;
-            // 
-            // OrganizationKPP
-            // 
-            this.OrganizationKPP.HeaderText = "КПП";
-            this.OrganizationKPP.MinimumWidth = 6;
-            this.OrganizationKPP.Name = "OrganizationKPP";
-            this.OrganizationKPP.ReadOnly = true;
-            // 
-            // OrganizationCheckingAccount
-            // 
-            this.OrganizationCheckingAccount.HeaderText = "Расчетный счет";
-            this.OrganizationCheckingAccount.MinimumWidth = 6;
-            this.OrganizationCheckingAccount.Name = "OrganizationCheckingAccount";
-            this.OrganizationCheckingAccount.ReadOnly = true;
-            // 
-            // OrganizationCorrespondentAccount
-            // 
-            this.OrganizationCorrespondentAccount.HeaderText = "Корреспондентский счет";
-            this.OrganizationCorrespondentAccount.MinimumWidth = 6;
-            this.OrganizationCorrespondentAccount.Name = "OrganizationCorrespondentAccount";
-            this.OrganizationCorrespondentAccount.ReadOnly = true;
-            // 
-            // OrganizationBIK
-            // 
-            this.OrganizationBIK.HeaderText = "БИК";
-            this.OrganizationBIK.MinimumWidth = 6;
-            this.OrganizationBIK.Name = "OrganizationBIK";
-            this.OrganizationBIK.ReadOnly = true;
-            // 
-            // OrganizationOKPO
-            // 
-            this.OrganizationOKPO.HeaderText = "ОКПО";
-            this.OrganizationOKPO.MinimumWidth = 6;
-            this.OrganizationOKPO.Name = "OrganizationOKPO";
-            this.OrganizationOKPO.ReadOnly = true;
             // 
             // AddCounteragentButton
             // 
@@ -462,6 +379,90 @@ namespace Logistic
             this.label2.TabIndex = 6;
             this.label2.Text = "Фильтр";
             // 
+            // ID_Customer
+            // 
+            this.ID_Customer.HeaderText = "";
+            this.ID_Customer.Name = "ID_Customer";
+            this.ID_Customer.ReadOnly = true;
+            this.ID_Customer.Visible = false;
+            // 
+            // OrganizationName
+            // 
+            this.OrganizationName.HeaderText = "Название организации";
+            this.OrganizationName.MinimumWidth = 6;
+            this.OrganizationName.Name = "OrganizationName";
+            this.OrganizationName.ReadOnly = true;
+            // 
+            // OrganizationType
+            // 
+            this.OrganizationType.HeaderText = "Форма организации";
+            this.OrganizationType.MinimumWidth = 6;
+            this.OrganizationType.Name = "OrganizationType";
+            this.OrganizationType.ReadOnly = true;
+            // 
+            // DirectorName
+            // 
+            this.DirectorName.HeaderText = "ФИО директора";
+            this.DirectorName.MinimumWidth = 6;
+            this.DirectorName.Name = "DirectorName";
+            this.DirectorName.ReadOnly = true;
+            // 
+            // OrganizationAddress
+            // 
+            this.OrganizationAddress.HeaderText = "Юридический адрес";
+            this.OrganizationAddress.MinimumWidth = 6;
+            this.OrganizationAddress.Name = "OrganizationAddress";
+            this.OrganizationAddress.ReadOnly = true;
+            // 
+            // OrganizationMailAddress
+            // 
+            this.OrganizationMailAddress.HeaderText = "Почтовый адрес";
+            this.OrganizationMailAddress.MinimumWidth = 6;
+            this.OrganizationMailAddress.Name = "OrganizationMailAddress";
+            this.OrganizationMailAddress.ReadOnly = true;
+            // 
+            // OrganizationINN
+            // 
+            this.OrganizationINN.HeaderText = "ИНН";
+            this.OrganizationINN.MinimumWidth = 6;
+            this.OrganizationINN.Name = "OrganizationINN";
+            this.OrganizationINN.ReadOnly = true;
+            // 
+            // OrganizationKPP
+            // 
+            this.OrganizationKPP.HeaderText = "КПП";
+            this.OrganizationKPP.MinimumWidth = 6;
+            this.OrganizationKPP.Name = "OrganizationKPP";
+            this.OrganizationKPP.ReadOnly = true;
+            // 
+            // OrganizationCheckingAccount
+            // 
+            this.OrganizationCheckingAccount.HeaderText = "Расчетный счет";
+            this.OrganizationCheckingAccount.MinimumWidth = 6;
+            this.OrganizationCheckingAccount.Name = "OrganizationCheckingAccount";
+            this.OrganizationCheckingAccount.ReadOnly = true;
+            // 
+            // OrganizationCorrespondentAccount
+            // 
+            this.OrganizationCorrespondentAccount.HeaderText = "Корреспондентский счет";
+            this.OrganizationCorrespondentAccount.MinimumWidth = 6;
+            this.OrganizationCorrespondentAccount.Name = "OrganizationCorrespondentAccount";
+            this.OrganizationCorrespondentAccount.ReadOnly = true;
+            // 
+            // OrganizationBIK
+            // 
+            this.OrganizationBIK.HeaderText = "БИК";
+            this.OrganizationBIK.MinimumWidth = 6;
+            this.OrganizationBIK.Name = "OrganizationBIK";
+            this.OrganizationBIK.ReadOnly = true;
+            // 
+            // OrganizationOKPO
+            // 
+            this.OrganizationOKPO.HeaderText = "ОКПО";
+            this.OrganizationOKPO.MinimumWidth = 6;
+            this.OrganizationOKPO.Name = "OrganizationOKPO";
+            this.OrganizationOKPO.ReadOnly = true;
+            // 
             // Counteragents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -518,6 +519,7 @@ namespace Logistic
         private System.Windows.Forms.TextBox OrganizationNameTextBox;
         private System.Windows.Forms.Button ClearFilterButton;
         private System.Windows.Forms.Button FindButton;
+        private System.Windows.Forms.ComboBox OkpoComboBox;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_Customer;
         private System.Windows.Forms.DataGridViewTextBoxColumn OrganizationName;
         private System.Windows.Forms.DataGridViewTextBoxColumn OrganizationType;
@@ -530,6 +532,5 @@ namespace Logistic
         private System.Windows.Forms.DataGridViewTextBoxColumn OrganizationCorrespondentAccount;
         private System.Windows.Forms.DataGridViewTextBoxColumn OrganizationBIK;
         private System.Windows.Forms.DataGridViewTextBoxColumn OrganizationOKPO;
-        private System.Windows.Forms.ComboBox OkpoComboBox;
     }
 }

@@ -359,7 +359,8 @@ namespace Logistic
             this.StatusListBox.Items.AddRange(new object[] {
             "Любой",
             "Активен",
-            "Завершен"});
+            "Завершен",
+            "В ожидании"});
             this.StatusListBox.Location = new System.Drawing.Point(55, 157);
             this.StatusListBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.StatusListBox.Name = "StatusListBox";
