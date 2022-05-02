@@ -60,10 +60,10 @@ namespace Logistic.Additions
 			document.Activate();
 
 			// выбираем таблицу
-			table = document.Tables[data.tableIndex];
+			//table = document.Tables[data.tableIndex];
 
-			CurrentRow = 1;
-			NumberRows = data.valuesCustomValues.Count;
+			//CurrentRow = 1;
+			//NumberRows = data.valuesCustomValues.Count;
 		}
 
 		/*
@@ -101,7 +101,7 @@ namespace Logistic.Additions
 
 		public void Close()
 		{
-			table.Rows.First.Delete();
+			//table.Rows.First.Delete();
 
 			// конец экспорта
 			if (data.openFileExport)
@@ -132,39 +132,39 @@ namespace Logistic.Additions
 			Word.Document document = wordApp.Documents.OpenNoRepairDialog(data.nameFileExport);
 			document.Activate();
 
-			// выбираем таблицу в ворде
-			Word.Table table = document.Tables[data.tableIndex];
+			//// выбираем таблицу в ворде
+			//Word.Table table = document.Tables[data.tableIndex];
 
-			// Добавление строки в таблицу
-			// добавляет почему-то строку перед существующей
-			// поэтому проще сначала создать нужное количество строк
-			// а потом пройтись по ним и заполнить каждую
-			int numRows = data.valuesCustomValues.Count - 1;
-			for (int i = 0; i < numRows; i++)
-			{
-				// дублирование пустой строки таблицы
-				var row = table.Rows.Add(table.Rows[1]);
-			}
+			//// Добавление строки в таблицу
+			//// добавляет почему-то строку перед существующей
+			//// поэтому проще сначала создать нужное количество строк
+			//// а потом пройтись по ним и заполнить каждую
+			//int numRows = data.valuesCustomValues.Count - 1;
+			//for (int i = 0; i < numRows; i++)
+			//{
+			//	// дублирование пустой строки таблицы
+			//	var row = table.Rows.Add(table.Rows[1]);
+			//}
 
 
-			// пройтись по каждой строке таблицы и через Cells[index] заполнить ее
-			int numRow = 1; // порядковый номер
-			foreach (Word.Row row in table.Rows)
-			{
+			//// пройтись по каждой строке таблицы и через Cells[index] заполнить ее
+			//int numRow = 1; // порядковый номер
+			//foreach (Word.Row row in table.Rows)
+			//{
 
-				// порядковый номер строки
-				row.Cells[1].Range.Text = (numRow++).ToString();
+			//	// порядковый номер строки
+			//	row.Cells[1].Range.Text = (numRow++).ToString();
 
-				// для каждого индекса дефолтного значения в строке заполняем дефолтным значением
-				int numDefaultValues = data.indicesDefaultValues.Count;
-				for (int j = 0; j < numDefaultValues; j++)
-					row.Cells[data.indicesDefaultValues[j]].Range.Text = data.valuesDefaultValues[j];
+			//	// для каждого индекса дефолтного значения в строке заполняем дефолтным значением
+			//	int numDefaultValues = data.indicesDefaultValues.Count;
+			//	for (int j = 0; j < numDefaultValues; j++)
+			//		row.Cells[data.indicesDefaultValues[j]].Range.Text = data.valuesDefaultValues[j];
 
-				// кастомные значения
-				int numCustomColumns = data.indicesCustomValues.Count;
-				for (int k = 0; k < numCustomColumns; k++)
-					row.Cells[data.indicesCustomValues[k]].Range.Text = data.valuesCustomValues[numRow - 2][k];
-			}
+			//	// кастомные значения
+			//	int numCustomColumns = data.indicesCustomValues.Count;
+			//	for (int k = 0; k < numCustomColumns; k++)
+			//		row.Cells[data.indicesCustomValues[k]].Range.Text = data.valuesCustomValues[numRow - 2][k];
+			//}
 
 			// замена текста
 			void ReplaceText(string TextToReplace, string TextReplaceWith)

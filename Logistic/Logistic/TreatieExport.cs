@@ -89,7 +89,7 @@ namespace Logistic
 
             SaveFileDialog saveFileDialog = new SaveFileDialog
             {
-                Filter = "Документ Word (*.docx)|*.docx",
+                Filter = "Документ Word (*.doc)|*.doc",
                 RestoreDirectory = true
             };
 
@@ -165,6 +165,8 @@ namespace Logistic
 				treatie.Claims_Days.ToString(),
 
 				treatie.Claims_Days.ToString(),
+
+				DateToString( treatie.End_Date, "г." ),
 
 				treatie.customer.Organization_Name,
 				treatie.customer.INN,

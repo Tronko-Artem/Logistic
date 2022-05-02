@@ -30,7 +30,7 @@ namespace Logistic.Models
         protected override void OnConfiguring( DbContextOptionsBuilder optionsBuilder )
         {
             optionsBuilder.UseMySQL(
-                "server=localhost;user=root;password=111111;database=testdb;"
+                "server=localhost;user=root;password=12345;database=testdb;"
             );
         }
     }
