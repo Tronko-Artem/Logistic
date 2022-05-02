@@ -117,6 +117,7 @@ namespace Logistic
             if( String.IsNullOrWhiteSpace( InnTextBox.Text ) ) InnTextBox.Text = "";
             if( String.IsNullOrWhiteSpace( KppTextBox.Text ) ) KppTextBox.Text = "";
             if( String.IsNullOrWhiteSpace( CorrAccountTextBox.Text ) ) CorrAccountTextBox.Text = "";
+            if( String.IsNullOrWhiteSpace( CheckingAccountTextBox.Text ) ) CheckingAccountTextBox.Text = "";
             if( String.IsNullOrWhiteSpace( BikTextBox.Text ) ) BikTextBox.Text = "";
 
             List<Customer> allData = Program.db.CustomersList.ToList();
@@ -133,6 +134,7 @@ namespace Logistic
                     customer.INN.ToLower().Contains( this.InnTextBox.Text.ToLower() ) &&
                     customer.KPP.ToLower().Contains( this.KppTextBox.Text.ToLower() ) &&
                     customer.Korr_Account.ToLower().Contains( this.CorrAccountTextBox.Text.ToLower() ) &&
+                    customer.Checking_Account.ToLower().Contains( this.CheckingAccountTextBox.Text.ToLower() ) &&
                     customer.BIK.ToLower().Contains( this.BikTextBox.Text.ToLower() ) )
                 {
 
