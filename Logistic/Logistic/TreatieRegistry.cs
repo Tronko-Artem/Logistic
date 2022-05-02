@@ -102,8 +102,20 @@ namespace Logistic
 
         private void ExportTreatieButton_Click(object sender, EventArgs e)
         {
-            Form TreatieExport = new TreatieExport();
-            TreatieExport.Show();
+            int ID_Treatie = -1;
+            try
+            {
+                ID_Treatie = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value);
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show("Выберите запись, к которой нужно перейти", "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            Treatie treatie = Program.db.TreatiesList.Find(ID_Treatie);
+
+            if (treatie != null)
+                new TreatieExport(treatie).ShowDialog();
         }
 
         private void TreatieRegistry_Load(object sender, EventArgs e)
