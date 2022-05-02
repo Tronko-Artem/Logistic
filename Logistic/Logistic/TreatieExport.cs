@@ -151,7 +151,7 @@ namespace Logistic
 				treatie.Number_Of_Treatie,
 				"г. Барнаул",
 				DateToString( treatie.Start_Date, "г." ),
-				treatie.customer.Organization_Name,
+				treatie.customer.Organization_Form + " " + treatie.customer.Organization_Name,
 				treatie.customer.Director_FIO,
 
 				DateToString( treatie.End_Date, "г." ),
@@ -168,7 +168,7 @@ namespace Logistic
 
 				DateToString( treatie.End_Date, "г." ),
 
-				treatie.customer.Organization_Name,
+				treatie.customer.Organization_Form + " " + treatie.customer.Organization_Name,
 				treatie.customer.INN,
 				treatie.customer.KPP,
 				treatie.customer.Law_Address,
